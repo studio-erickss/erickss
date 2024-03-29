@@ -1,0 +1,218 @@
+@mixin flex-column() {
+    display: flex;
+    flex-direction: column;
+}
+
+$header-height: min(10svh, 100px);
+
+
+#app {
+    min-height: 100svh;
+    @include flex-column();
+    justify-content: space-between;
+}
+
+#app header {
+    width: 100%;
+    background-color: var(--background-color);
+    padding: 0.5rem;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#app header nav {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#app header nav>* {
+    padding: 0.5rem 1rem;
+    border-bottom: 0.5px solid var(--light-steel-blue);
+}
+
+#app header nav>*:hover {
+    border-top: 1px solid var(--dark-green);
+    border-bottom: 1px solid var(--dark-green);
+    color: var(--dark-green);
+}
+
+#app main {
+    flex: 1;
+    
+}
+
+#app footer {
+    width: 100%;
+    background-color: var(--theme-green);
+    color: white;
+    padding: 0.5rem;
+    height: 1000px;
+}
+
+#hero {
+    height: calc(100svh - $header-height);
+    padding: 1rem;
+    padding-top: 5svh;
+    background: url('/images/black-pots.png');
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: contain;
+    @include flex-column();
+    // align-items: center;
+    // justify-content: center;
+    position: relative;
+    margin: auto;
+}
+
+// #hero:before {
+//     content: ' ';
+//     display: block;
+//     position: absolute;
+//     left: 0;
+//     top: 0;
+//     width: 100%;
+//     height: calc(100svh - $header-height);
+//     background: url('/images/cabin-with-plant-pots.jpeg'), linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+//     background-repeat: no-repeat;
+//     background-position: bottom;
+//     background-size: cover;
+//     background-blend-mode: multiply;
+//   }
+
+// #hero:before {
+//     content: ' ';
+//     display: block;
+//     position: absolute;
+//     left: 0;
+//     top: 0;
+//     width: 50svw;
+//     height: 50svh;
+//     // height: calc(100svh - $header-height);
+//     background: url('/images/black-pots.png');
+//     background-repeat: no-repeat;
+//     background-position: right;
+//     background-size: contain;
+//   }
+
+#hero-content {
+    background-color: white;
+    color: var(--deep-charcoal-blue);
+    padding: 2rem;
+    border-radius: 5px;
+
+    @include flex-column();
+  
+    max-width: min(90svw, 500px);
+    min-width: 50svw;
+    // height: 300px;
+    // padding: 35px;
+  
+    border: 1px solid rgba(255, 255, 255, .25);
+    // border-radius: 5px;
+    // background-color: rgba(255, 255, 255, 0.45);
+    // box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 10px 15px 3px rgba(0,0,0,0.1);
+    opacity: 0.9;
+    // display: flex;
+    // flex-wrap: wrap;
+    gap: 1rem;
+  
+    // backdrop-filter: blur(10px);
+}
+
+#utility-bar {
+    background-color: var(--theme-green);
+    width: 100%;
+    text-align: center;
+    color: white;
+}
+
+#hero-content p {
+    font-size: large;
+    white-space: pre-line;
+    line-height: 2rem;
+}
+
+
+#hero-content> * {
+    flex: 1;
+}
+
+
+#hero-content h1 {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+#call-to-action {
+    background-color: var(--theme-green);
+    color: white;
+    width: max-content;
+    padding: 1rem;
+    align-self: flex-end;
+    font-weight: bold;
+    font-size: larger;
+}
+
+#call-to-action:hover {
+    background-color: var(--dark-green);
+}
+
+#product-categories-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 2svh;
+    align-items: center;
+}
+
+// #product-categories-section>* {
+//     flex: 1;
+// }
+
+#product-categories-left {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: -200px;
+    position: relative;
+    justify-content: center;
+    flex: 2;
+}
+
+.product-category-card {
+    width: min(90svw, 350px);
+    min-height: 500px;
+    box-shadow: 0px -10px 15px 3px rgba(0,0,0,0.1);
+    background-color: white;
+    border-radius: 5px;
+}
+
+.product-category-card-text {
+    padding: 1rem;
+}
+
+.product-category-card-text h1 {
+    font-size: x-large;
+    font-weight: bold;
+}
+
+.product-category-card-image {
+    width: 100%;
+    height: 70%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+#product-categories-right {
+    min-width: 350px;
+}
+
+#product-categories-right p {
+    max-width: 500px;
+}
