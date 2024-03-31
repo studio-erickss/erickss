@@ -9,11 +9,16 @@
   --background-end-rgb: 255, 255, 255; */
   --background-rgb: 255, 255, 255;
   --background-color: #F8F9F9;
-  --theme-green: #65bc7b;
+  --theme-green: #65BC7B;
   --dark-green: #1BAE70;
+  --light-sea-green: #86D3B4;
+  --pale-aqua: #BAE7DE;
   --deep-charcoal-blue: #48515B;
   --deep-navy-blue: #27313F;
   --light-steel-blue: #9CA7AB;
+  --light-orange: #EF820D;
+  --dark-orange: #D9534F;
+  --theme-gray: #555;
 }
 
 /* @media (prefers-color-scheme: dark) {
@@ -38,10 +43,24 @@ body {
     )
     rgb(var(--background-start-rgb)); */
   background-color: var(--background-color);
+  /* background-image: url(/images/stacked-waves-haikei.png);
+  background-repeat: no-repeat;
+  background-size: 100svw 100svh; */
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+button {
+  color: white;
+  width: max-content;
+  padding: 1rem;
+  font-weight: bold;
+}
+
+button:hover {
+  opacity: 0.8;
 }

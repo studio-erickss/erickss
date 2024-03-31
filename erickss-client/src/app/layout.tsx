@@ -17,7 +17,7 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-	title: "Erick's Studio",
+	title: "Studio Erickss",
 	description: "Your home and garden partner.",
 };
 
