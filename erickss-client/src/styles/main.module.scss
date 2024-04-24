@@ -8,45 +8,169 @@ $header-height: min(10svh, 100px);
 
 #app {
     min-height: 100svh;
+    width: 100%;
     @include flex-column();
+    align-items: center;
     justify-content: space-between;
 }
 
 #app header {
-    width: 100%;
-    background-color: rgba(255,255,255,0.8);
-    padding: 0.5rem;
+    // background-color: var(--base-bg);
+    padding: 0.5rem 2svw;
     position: sticky;
     top: 0;
     z-index: 999;
     display: flex;
     align-items: center;
-    justify-content: space-around;
-}
-
-#app header nav {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-#app header nav>* {
-    padding: 0.5rem 1rem;
-    border-bottom: 0.5px solid var(--light-steel-blue);
-}
-
-#app header nav>*:hover {
-    border-top: 1px solid var(--dark-green);
-    border-bottom: 1px solid var(--dark-green);
-    color: var(--dark-green);
-}
-
-#hamburger {
-    display: none;
+    justify-content: space-between;
+    margin-bottom: 1rem;
 }
 
 #app main {
     flex: 1;
-    
+    @include flex-column();
+    align-items: center;
+    width: 95%;
+    justify-content: center;
+    padding-top: 5svh;
+}
+
+#utility-bar {
+    background-color: var(--dark-green);
+    width: 100%;
+    text-align: center;
+    color: white;
+}
+
+
+#hero {
+    @include flex-column();
+    gap: 2rem;
+    width: 90%;
+    align-items: center;
+}
+
+#hero-main {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    min-height: 45svh;
+    gap: 1rem;
+}
+
+#hero-main-general {
+    flex: 2;
+    background: url(/images/cabin-with-plant-pots.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 20px;
+    min-width: 50%;
+    min-height: 45svh;
+}
+
+#hero-main-categories {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    width: min(50%, 620px);
+    gap: 1rem;
+    min-width: 320px;
+    height: 45svh;
+}
+
+.hero-main-category {
+    // background: url(/images/water-features.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    // width: 300px;
+    // height: 300px;
+    width: calc((100% - 1rem)/2);
+    // padding-bottom: 48%;
+    border-radius: 20px;
+    display: flex;
+    align-items: flex-end;
+    cursor: pointer;
+}
+
+.hero-main-category-label {
+    // background-color: oklch(var(--b1));
+    margin-left: 0.5rem;
+    margin-bottom: 0.5rem;
+    border-radius: 20px;
+    padding: 5px;
+    font-size: smaller;
+}
+
+.hero-main-category:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in-out;
+  }
+
+
+#hero-main-general-text-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#hero-main-general-text-container > * {
+    flex: 1;
+}
+
+#hero-main-general-text-main {
+    font-size: 2.5rem;
+    font-weight: 800;
+    min-width: 320px;
+}
+
+#hero-main-general-text-sub {
+    min-width: 320px;
+    @include flex-column();
+    padding: 5px;
+    gap: 1rem;
+    padding-bottom: 1rem;
+}
+
+#ctabtns {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    align-self: flex-end;
+}
+
+.popular-product {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.popular-product-desc {
+    @include flex-column();
+    gap: 0.5rem;
+}
+
+.popular-product-category {
+    color: var(--light-steel-blue);
+}
+
+.popular-product-price {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.popular-product-btns {
+    display: flex;
+}
+
+.popular-product-view-btn {
+    flex: 1;
+    border-color: oklch(var(--b3));
+}
+
+.popular-product-order-btn {
+    display: flex;
+    align-items: center;
 }
 
 #app footer {
@@ -58,6 +182,7 @@ $header-height: min(10svh, 100px);
     flex-wrap: wrap;
     justify-content: center;
     gap: 2rem;
+    margin-top: 2rem;
 }
 
 .footer-section-header {
@@ -70,7 +195,6 @@ $header-height: min(10svh, 100px);
 #erickss-footer-section {
     width: 350px;
 }
-
 
 .footer-social {
     display: flex;
@@ -85,393 +209,38 @@ $header-height: min(10svh, 100px);
     color: teal;
 }
 
-#hero {
-    min-height: calc(100svh - $header-height);
-    padding: 1rem;
-    padding-top: 5svh;
-    background: url('/images/cachepots.png'), url(/images/stacked-waves-haikei.png);
-    background-color: var(--pale-aqua);
-    background-repeat: no-repeat;
-    background-position: right, center;
-    background-size: contain, cover;
-    @include flex-column();
-    // align-items: center;
-    // justify-content: center;
-    position: relative;
-    margin: auto;
-}
-
-// #hero:before {
-//     content: ' ';
-//     display: block;
-//     position: absolute;
-//     left: 0;
-//     top: 0;
-//     width: 100%;
-//     height: calc(100svh - $header-height);
-//     background: url('/images/cabin-with-plant-pots.jpeg'), linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
-//     background-repeat: no-repeat;
-//     background-position: bottom;
-//     background-size: cover;
-//     background-blend-mode: multiply;
-//   }
-
-// #hero:before {
-//     content: ' ';
-//     display: block;
-//     position: absolute;
-//     left: 0;
-//     top: 0;
-//     width: 50svw;
-//     height: 50svh;
-//     // height: calc(100svh - $header-height);
-//     background: url('/images/black-pots.png');
-//     background-repeat: no-repeat;
-//     background-position: right;
-//     background-size: contain;
-//   }
-
-#hero-content {
-    // background-color: white;
-    background-color: rgba(255,255,255,0.8);
-    color: var(--deep-charcoal-blue);
-    padding: 2rem;
-    border-radius: 5px;
-
-    @include flex-column();
-  
-    max-width: min(90svw, 666px);
-    min-width: 50svw;
-    // height: 300px;
-    // padding: 35px;
-  
-    border: 1px solid rgba(255, 255, 255, .25);
-    // border-radius: 5px;
-    // background-color: rgba(255, 255, 255, 0.45);
-    // box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
-    box-shadow: 0px 10px 15px 3px rgba(0,0,0,0.1);
-    opacity: 0.9;
-    // display: flex;
-    // flex-wrap: wrap;
-    gap: 1rem;
-  
-    // backdrop-filter: blur(10px);
-}
-
-#utility-bar {
-    background-color: var(--dark-green);
-    width: 100%;
-    text-align: center;
-    color: white;
-}
-
-#hero-content p {
-    font-size: large;
-    white-space: pre-line;
-    line-height: 2rem;
-}
-
-
-#hero-content> * {
-    flex: 1;
-}
-
-
-#hero-content h1 {
-    font-size: 40px;
-    font-weight: bold;
-}
-
-#call-to-action-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    justify-content: flex-end;
-}
-
-#call-to-action-container button {
-    border-radius: 2rem;
-}
-
-.primary-button {
-    background-color: var(--light-orange);
-}
-
-.secondary-button {
-    background-color: var(--theme-gray);
-}
-
-.tertiary-button {
-    border: 2px solid var(--dark-green);
-    color: var(--deep-charcoal-blue);
-}
-
-#product-categories-section {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
-    // margin-top: 2svh;
-    align-items: center;
-    background-color: var(--light-sea-green);
-    position: relative;
-    padding: 1rem;
-    justify-content: space-between;
-}
-
-#product-categories-left {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
-    margin-top: -200px;
-    position: relative;
-    // justify-content: center;
-    flex: 2;
-    min-width: min(90svw, 800px);
-}
-
-.product-category-card {
-    min-width: 350px;
-    width: min(90svw, 350px);
-    max-width: 350px;
-    min-height: 500px;
-    flex: 1;
-    // box-shadow: 0px -10px 15px 3px rgba(0,0,0,0.1);
-    box-shadow: 0px -10px 15px 3px rgba(0,0,0,0.1), 0px 5px 5px rgba(0,0,0,0.1);
-    background-color: white;
-    border-radius: 5px;
-    transition: box-shadow 0.3s ease, transform 0.3s ease;
-    cursor: pointer;
-    border-bottom: 5px solid var(--theme-green);
-    padding-bottom: 1rem;
-}
-
-.product-category-card:hover {
-    box-shadow: 0px -15px 20px 5px rgba(0,0,0,0.2), 0px 7px 7px rgba(0,0,0,0.2);
-    transform: translateY(-5px);
-    background: radial-gradient(circle, var(--background-color), var(--theme-green));
-    background-size: 200% 200%;
-    background-position: center;
-    animation: fillThemeGreen 1.5s forwards;
-}
-
-@keyframes fillThemeGreen {
-    to {
-        background-position: 0% 0%;
-    }
-}
-
-.product-category-card-text {
-    padding: 1rem;
-}
-
-.product-category-card-text h1 {
-    font-size: x-large;
-    font-weight: bold;
-}
-
-.product-category-card-image {
-    width: 100%;
-    height: 70%;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    border-radius: 5px;
-}
-
-#product-categories-right {
-    min-width: 350px;
-}
-
-#product-categories-right p {
-    max-width: 500px;
-}
-
-#popular-products-section {
-    // height: 100svh;
-    background-color: var(--pale-aqua);
-    position: relative;
-    @include flex-column();
-    align-items: center;
-    justify-content: flex-end;
-}
-
-#popular-products {
-    width: 98svw;
-    // min-height: 60svh;
-    background-color: rgba(255, 255, 255, .8);
-    border-style: solid;
-    border-width: 1px;
-    border-color: var(--background-color);
-    box-shadow: 0 12px 0 -6px rgba(0,0,0,.04);
-    padding: 20px;
-}
-
-#popular-products-cards {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
-    position: relative;
-    justify-content: center;
-    flex: 2;
-    width: 95%;
-}
-
-.popular-product-card {
-    min-width: 165px;
-    flex: 1;
-    max-width: 300px;
-    min-height: 500px;
-    box-shadow: 0px -10px -15px 3px rgba(0,0,0,0.1);
-    // box-shadow: 0px -10px 15px 3px rgba(0,0,0,0.1), 0px 5px 5px rgba(0,0,0,0.1);
-    background-color: var(--background-color);
-    border-radius: 5px;
-    transition: box-shadow 0.3s ease, transform 0.3s ease;
-    cursor: pointer;
-    border-bottom: 5px solid var(--theme-green);
-    // padding-bottom: 1rem;
-    @include flex-column();
-    justify-content: space-between;
-}
-
-.popular-product-card:hover {
-    // box-shadow: 0px -15px 20px 5px rgba(0,0,0,0.2), 0px 7px 7px rgba(0,0,0,0.2);
-    transform: translateY(-5px);
-    background: radial-gradient(circle, var(--background-color), var(--theme-green));
-    background-size: 200% 200%;
-    background-position: center;
-    animation: fillThemeGreen 1.5s forwards;
-}
-
-@keyframes fillThemeGreen {
-    to {
-        background-position: 0% 0%;
-    }
-}
-
-.popular-product-card-category {
-    color: var(--light-steel-blue);
-}
-
-.popular-product-card-title {
-    color: var(--deep-charcoal-blue);
-    font-size: 24px;
-    font-weight: bold;
-}
-
-.popular-product-card-text {
-    padding: 1rem;
-    @include flex-column();
-
-}
-
-.popular-product-card-text h1 {
-    font-size: x-large;
-    font-weight: bold;
-}
-
-.popular-product-card-image {
-    width: 100%;
-    height: 70%;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    border-radius: 5px;
-}
-
-.order-button {
-    align-self: flex-end;
-    padding: 5px;
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-}
-
-#app h2 {
-    font-size: 32px;
-    font-weight: bold;
-    color: var(--deep-charcoal-blue);
-}
-
-#benefits-section {
-    height: 50svh;
-    position: relative;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    padding: 1rem;
-}
-
-#benefits-section>* {
-    flex: 1;
-}
-
-.benefit-title {
-    font-size: 24px;
-    font-weight: bold;
-    color: var(--deep-charcoal-blue);
-}
-
-.benefit-text {
-    color: var(--deep-charcoal-blue);
-}
-
-.spacer {
-    // aspect-ratio: 960/300;
-    width: 100%;
-    background-repeat: no-repeat;
-    background-position: center top;
-    background-size: cover;
-}
-
-.wave-theme-green {
-    background-image: url(/images/wave-haikei-theme-green.svg);
-}
-
-.wave-light-sea-green {
-    background-image: url(/images/wave-haikei-light-sea-green.svg);
-}
-
-.wave-pale-aqua {
-    background-image: url(/images/wave-haikei-pale-aqua.svg);
-}
-
-
-
-
 @media (max-width: 666px) {
     #utility-bar {
         font-size: small;
     }
+}
 
-    #product-categories-left {
-        margin-top: 1rem;
-    }
+#under-maintenance {
+    padding: 5px;
+    background-color: var(--dark-orange);
+    position: fixed;
+    bottom: 1rem;
+    left: 1rem;
+    border-radius: 1rem;
+    color: #FFF;
+    text-align: center;
+    z-index: 999;
+    // display: flex;
+    // justify-content: center;
+}
 
-    #hero-content h1 {
-        font-size: 32px;
-        font-weight: bold;
-    }
-
-    #hero-content p {
-        line-height: 2rem;
-    }
-
-    #app header {
-        justify-content: space-between;
-    }
-
-    #app header nav {
-        display: none;
-    }
-
-    #hamburger {
-        display: inline;
-    }
-
-    #hero {
-        padding: 5px;
-        align-items: center;
-        min-height: auto;
-    }
-    #hero-content {padding: 1rem;}
+#whatsapp {
+    position: fixed;
+    width: 48px;
+    height: 48px;
+    bottom: 1rem;
+    right: 1rem;
+    background-color: #25d366;
+    color: #FFF;
+    border-radius: 50%;
+    text-align: center;
+    box-shadow: 1px 2px 1px #999;
+    z-index: 999;
+    display: flex;
+    justify-content: center;
 }

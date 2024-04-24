@@ -8,7 +8,11 @@ export default function Footer() {
         <footer>
             <section id={styles['erickss-footer-section']}>
                 <div className={styles['footer-section-header']}>Studio Erickss</div>
-                <div>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusamus vero aut hic maxime amet quibusdam sapiente porro corporis iure. Totam veniam dolor deserunt nemo voluptas. Exercitationem architecto recusandae reprehenderit illum.</div>
+                <div>
+                    Transform your home into a sanctuary and your garden into a thriving paradise with Studio Erickss.
+                    We're your all-in-one solution for expert design, premium products, and the inspiration to realize your dream spaces.
+                    Let's create something beautiful together.
+                </div>
             </section>
             <section id={styles['links-footer-section']}>
                 <div className={styles['footer-section-header']}>Quick Links</div>

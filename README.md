@@ -1,2 +1,2 @@
 # erickss
-Monorepo for Erick's Studio web solutions
+Monorepo for Studio Erickss web solutions

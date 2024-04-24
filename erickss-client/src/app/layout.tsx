@@ -5,6 +5,8 @@ import "@/styles/globals.css";
 import styles from '@/styles/main.module.scss'
 import Header from "@/components/header";
 import Footer from "@/components/footer";
+import Link from "next/link";
+import Image from "next/image";
 
 
 // const inter = Inter({ subsets: ["latin"] });
@@ -28,11 +30,15 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="en">
-			<body className={poppins.variable}>
+			<body className={`${poppins.variable} bg-base-100`}>
 				<div id={styles.app}>
 					<Header/>
 					<main>{children}</main>
 					<Footer/>
+					<div id={styles['under-maintenance']}>under maintenance</div>
+					<Link id={styles.whatsapp} aria-label="Chat on WhatsApp" href="https://wa.me/254746767352" target="_blank">
+						<Image id={styles['whatsapp-icon']} alt="Chat on WhatsApp" src="/images/WhatsApp.svg" width={32} height={32}/>
+					</Link>
 				</div>
 			</body>
 		</html>
