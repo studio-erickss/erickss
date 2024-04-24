@@ -1,5 +1,10 @@
 import type { Config } from "tailwindcss";
 
+
+const {
+  default: flattenColorPalette,
+} = require("tailwindcss/lib/util/flattenColorPalette");
+
 const config: Config = {
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
@@ -15,6 +20,29 @@ const config: Config = {
       },
     },
   },
-  plugins: [],
+  plugins: [require("daisyui")],
+  daisyui: {
+    themes: [
+      {
+        light: {
+          ...require("daisyui/src/theming/themes")["light"],
+          primary: "#EF820D",
+          'primary-content': 'white',
+          secondary: '#65BC7B',
+          'secondary-content': 'white',
+          accent: '#D3D3D3',
+          'base-100': '#e6e6e6',
+        },
+        dark: {
+          ...require("daisyui/src/theming/themes")["dark"],
+          primary: "#EF820D",
+          'primary-content': 'white',
+          secondary: '#65BC7B',
+          'secondary-content': 'white',
+          accent: '#D3D3D3',
+        },
+      },
+    ],
+  },
 };
 export default config;
