@@ -166,11 +166,15 @@ $header-height: min(10svh, 100px);
 .popular-product-view-btn {
     flex: 1;
     border-color: oklch(var(--b3));
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
 }
 
 .popular-product-order-btn {
     display: flex;
     align-items: center;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
 }
 
 #app footer {
@@ -183,6 +187,10 @@ $header-height: min(10svh, 100px);
     justify-content: center;
     gap: 2rem;
     margin-top: 2rem;
+}
+
+@media (prefers-color-scheme: dark) {
+    #app footer {background-color: var(--darkest-green);}
 }
 
 .footer-section-header {
