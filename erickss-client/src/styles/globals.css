@@ -5,12 +5,7 @@
 
 :root {
   --foreground-rgb: 0, 0, 0;
-  /* --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255; */
-
   --off-white: hsl(36, 100%, 99%);
-  /* --base-bg: #e6e6e6; */
-
   --background-rgb: 255, 255, 255;
   --background-color: #F8F9F9;
   --theme-green: #65BC7B;
@@ -24,18 +19,16 @@
   --light-orange: #EF820D;
   --dark-orange: #D9534F;
   --theme-gray: #555;
-  --bottom-left-box-shadow: 0px 0px 0px 1px rgb(140 140 140/.2) ,0px 4px 4px rgb(0 0 0/.3) /* from linkedin *? **/
+  --bottom-left-box-shadow: 0px 0px 0px 1px rgb(140 140 140/.2) ,0px 4px 4px rgb(0 0 0/.3);
+  --dull-color: hsl(0, 0%, 50%);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
-    /* --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0; */
-    /* --base-bg: var(--fallback-b1,oklch(var(--b1)/var(--tw-bg-opacity))); */
-
     --theme-green: #3B8C4D;
     --dark-green: #1BAE70;
+    --dull-color: hsl(0, 0%, 80%);
   }
 }
 
@@ -47,22 +40,6 @@ body {
   color: rgb(var(--foreground-rgb));
   max-width: 1920px;
   margin: auto;
-  /* background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb)); */
-  /* background-color: var(--background-color); */
-  /* background:linear-gradient(90deg,#FFDCB8 0%,#C7FFD0 100%); */
-  /* background:linear-gradient(90deg,#C7FFD0 0%,#FFDCB8 100%); */
-  /* background: url(/images/Seed_textured_background_green_D_alt_FPO.jpg); */
-  /* background-size: contain; */
-  /* background-position: top right; */
-  /* background-repeat: no-repeat; */
-  /* background-size: auto 100svh; */
-
-  /* background-color: var(--base-bg); */
 }
 
 @layer utilities {
@@ -80,4 +57,8 @@ button {
 
 button:hover {
   opacity: 0.8;
+}
+
+.dull-text {
+  color: var(--dull-color);
 }

@@ -31,7 +31,7 @@ const config: Config = {
           secondary: '#65BC7B',
           'secondary-content': 'white',
           accent: '#D3D3D3',
-          'base-100': '#e6e6e6',
+          // 'base-100': '#e6e6e6', // affects some components. e.g. skeletons are not visible in light mode.
         },
         dark: {
           ...require("daisyui/src/theming/themes")["dark"],
