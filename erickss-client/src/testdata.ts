@@ -23,7 +23,7 @@ export const products: Product[] = [
         id: '2',
         slug: 'kivu-70',
         name: 'Kivu 70',
-        mainImageUrl: `/erickss-logo-compressed.png`,
+        mainImageUrl: `${cloudfront}/387790622_1351314215476258_5873222743562147414_n.jpg`,
         listPrice: 4900,
         salePrice: null,
         shortDescription: null,
@@ -35,12 +35,16 @@ export const products: Product[] = [
         id: '3',
         slug: 'tanganyika-94',
         name: 'Tanganyika 94',
-        mainImageUrl: `${cloudfront}/417946421_7126910930757620_3522514218242142490.jpg`,
+        mainImageUrl: `${cloudfront}/IMG_20240108_131352_602.jpg`,
         listPrice: 5600,
         salePrice: null,
         shortDescription: null,
         description: null,
-        images: [],
+        images: [
+            `${cloudfront}/IMG_20240108_131357_551.jpg`,
+            `${cloudfront}/IMG_20240108_131403_329.jpg`,
+            `${cloudfront}/IMG_20240108_131404_458.jpg`
+        ],
         category: ''
     },
     {
@@ -52,14 +56,16 @@ export const products: Product[] = [
         salePrice: 2800,
         shortDescription: null,
         description: null,
-        images: [],
+        images: [
+            `${cloudfront}/403743212_725901042776140_6007214222646571896_n.jpg`
+        ],
         category: ''
     },
     {
         id: '5',
         slug: 'nyala-40',
         name: 'Nyala 40',
-        mainImageUrl: `${cloudfront}/368140731_991353518654201_7072073410340439700.jpg`,
+        mainImageUrl: `${cloudfront}/411859166_869834004871818_281661850783372870_n.jpg`,
         listPrice: 2500,
         salePrice: null,
         shortDescription: null,
@@ -71,7 +77,7 @@ export const products: Product[] = [
         id: '6',
         slug: 'aba-ridge-37',
         name: 'Aba Ridge 37',
-        mainImageUrl: `${cloudfront}/403929338_878007990240932_2481344637801058614.jpg`,
+        mainImageUrl: `${cloudfront}/403929338_878007990240932_2481344637801058614_n.jpg`,
         listPrice: 4900,
         salePrice: null,
         shortDescription: null,
@@ -88,19 +94,24 @@ export const products: Product[] = [
         salePrice: null,
         shortDescription: null,
         description: null,
-        images: [],
+        images: [
+            `${cloudfront}/403641688_1413260019597632_2223694655808573168_n.jpg`
+        ],
         category: ''
     },
     {
         id: '8',
         slug: 'mwanza-50',
         name: 'Mwanza 50',
-        mainImageUrl: `${cloudfront}/411859166_869834004871818_281661850783372870.jpg`,
+        mainImageUrl: `${cloudfront}/369963568_1516808179141583_1648498641766914773_n.jpg`,
         listPrice: 4200,
         salePrice: null,
         shortDescription: null,
         description: null,
-        images: [],
+        images: [
+            `${cloudfront}/392819266_3610468839220301_312876767038813482_n.jpg`,
+            `${cloudfront}/370362723_252703037684879_2196321230813545377_n.jpg`,
+        ],
         category: ''
     },
     {
@@ -155,7 +166,7 @@ export const products: Product[] = [
         id: '13',
         slug: 'warri-58',
         name: 'Warri 58',
-        mainImageUrl: `${cloudfront}/29350-15/433117825_425881090009621_7806717279459515867.jpg`,
+        mainImageUrl: `${cloudfront}/433117825_425881090009621_7806717279459515867_n.jpg`,
         listPrice: 4800,
         salePrice: null,
         shortDescription: null,
@@ -167,19 +178,24 @@ export const products: Product[] = [
         id: '14',
         slug: 'kananga',
         name: 'Kananga',
-        mainImageUrl: `${cloudfront}/403914375_696101329162710_4900006513872604435.jpg`,
+        mainImageUrl: `${cloudfront}/403914375_696101329162710_4900006513872604435_n.jpg`,
         listPrice: 4600,
         salePrice: null,
         shortDescription: null,
         description: null,
-        images: [],
+        images: [
+            `${cloudfront}/403834027_667652068811810_264454814169591692_n.jpg`,
+            `${cloudfront}/402474742_723304763191595_3968661047826142016_n.jpg`,
+            `${cloudfront}/401903859_1368415840755704_6588821333583939938_n.jpg`,
+            `${cloudfront}/401903859_1368415840755704_6588821333583939938_n.jpg`,
+        ],
         category: ''
     },
     {
         id: '15',
         slug: 'ulu',
         name: 'Ulu',
-        mainImageUrl: `${cloudfront}/407270760_1502820600497198_4092292843058767086.jpg`,
+        mainImageUrl: `${cloudfront}/407270760_1502820600497198_4092292843058767086_n.jpg`,
         listPrice: 1900,
         salePrice: null,
         shortDescription: null,
@@ -191,7 +207,7 @@ export const products: Product[] = [
         id: '16',
         slug: 'ridged-trough-80x40x30',
         name: 'Ridged Trough 80x40x30',
-        mainImageUrl: `${cloudfront}/418604415_907739847607797_5715561604460257336.jpg`,
+        mainImageUrl: `${cloudfront}/418604415_907739847607797_5715561604460257336_n.jpg`,
         listPrice: 5200,
         salePrice: null,
         shortDescription: null,
@@ -203,7 +219,7 @@ export const products: Product[] = [
         id: '17',
         slug: 'trough-120x35x35',
         name: 'Trough 120x35x35',
-        mainImageUrl: `/erickss-logo-compressed.png`,
+        mainImageUrl: `${cloudfront}/375545246_1229893637683629_8434508144328222437_n.jpg`,
         listPrice: 5750,
         salePrice: null,
         shortDescription: null,
@@ -235,16 +251,4 @@ export const products: Product[] = [
         images: [],
         category: ''
     },
-    {
-        id: '19',
-        slug: 'chanzo-60-birdbath',
-        name: 'Chanzo 60 Birdbath',
-        mainImageUrl: `${cloudfront}/IMG_20240101_141848_757.jpg`,
-        listPrice: 8400,
-        salePrice: null,
-        shortDescription: null,
-        description: null,
-        images: [],
-        category: ''
-    }
 ]
