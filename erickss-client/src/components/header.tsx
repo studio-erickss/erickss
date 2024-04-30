@@ -8,8 +8,8 @@ export default function Header() {
     return (
         <>
             <div id={styles['utility-bar']}>
-                WhatsApp <a href="https://wa.me/254746767352" target="_blank" style={{ fontWeight: 'bold' }}>+254 746 767 352</a> or
-                Email <a href="mailto:info@erickss.com" style={{ fontWeight: 'bold' }}>info@erickss.com</a>
+                Call <a href="tel:+254717543033" target="_blank" style={{ fontWeight: 'bold' }}>+254 717 543 033</a> or
+                Email <a href="mailto:info@erickss.com" style={{ fontWeight: 'bold' }} target="_blank">info@erickss.com</a>
             </div>
             <header className="navbar bg-base-100">
                 <div className="navbar-start">

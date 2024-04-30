@@ -1,0 +1,250 @@
+import { Product } from "./types"
+
+const cloudfront = 'https://dn6zcp18tsbym.cloudfront.net'
+
+export const products: Product[] = [
+    {
+        id: '1',
+        name: 'Charm 42',
+        mainImageUrl: `${cloudfront}/npadbk930awy4xsqsc5s.jpg`,
+        listPrice: 9800,
+        salePrice: 9500,
+        shortDescription: null,
+        description: null,
+        slug: 'charm-42',
+        images: [
+            `${cloudfront}/425006178_1049635029464617_6548703622942224861_n.jpeg`,
+            `${cloudfront}/425160658_2132525710448331_7274797510840208439_n.jpeg`,
+            `${cloudfront}/425134503_728912442310350_2876170337719638151_n.jpeg`
+        ],
+        category: ''
+    },
+    {
+        id: '2',
+        slug: 'kivu-70',
+        name: 'Kivu 70',
+        mainImageUrl: `/erickss-logo-compressed.png`,
+        listPrice: 4900,
+        salePrice: null,
+        shortDescription: null,
+        description: null,
+        images: [],
+        category: ''
+    },
+    {
+        id: '3',
+        slug: 'tanganyika-94',
+        name: 'Tanganyika 94',
+        mainImageUrl: `${cloudfront}/417946421_7126910930757620_3522514218242142490.jpg`,
+        listPrice: 5600,
+        salePrice: null,
+        shortDescription: null,
+        description: null,
+        images: [],
+        category: ''
+    },
+    {
+        id: '4',
+        slug: 'nyala-ridge-40',
+        name: 'Nyala Ridge 40',
+        mainImageUrl: `${cloudfront}/IMG_20231204_133818_880.jpg`,
+        listPrice: 3000,
+        salePrice: 2800,
+        shortDescription: null,
+        description: null,
+        images: [],
+        category: ''
+    },
+    {
+        id: '5',
+        slug: 'nyala-40',
+        name: 'Nyala 40',
+        mainImageUrl: `${cloudfront}/368140731_991353518654201_7072073410340439700.jpg`,
+        listPrice: 2500,
+        salePrice: null,
+        shortDescription: null,
+        description: null,
+        images: [],
+        category: ''
+    },
+    {
+        id: '6',
+        slug: 'aba-ridge-37',
+        name: 'Aba Ridge 37',
+        mainImageUrl: `${cloudfront}/403929338_878007990240932_2481344637801058614.jpg`,
+        listPrice: 4900,
+        salePrice: null,
+        shortDescription: null,
+        description: null,
+        images: [],
+        category: ''
+    },
+    {
+        id: '7',
+        slug: 'mwanza-ridge-50',
+        name: 'Mwanza Ridge 50',
+        mainImageUrl: `${cloudfront}/bg6sjly2pniif1nsqtmx.jpg`,
+        listPrice: 4900,
+        salePrice: null,
+        shortDescription: null,
+        description: null,
+        images: [],
+        category: ''
+    },
+    {
+        id: '8',
+        slug: 'mwanza-50',
+        name: 'Mwanza 50',
+        mainImageUrl: `${cloudfront}/411859166_869834004871818_281661850783372870.jpg`,
+        listPrice: 4200,
+        salePrice: null,
+        shortDescription: null,
+        description: null,
+        images: [],
+        category: ''
+    },
+    {
+        id: '9',
+        slug: 'victoria-64',
+        name: 'Victoria 64',
+        mainImageUrl: `${cloudfront}/mjx0olzgnyuj8jxbhkpq.jpg`,
+        listPrice: 2800,
+        salePrice: null,
+        shortDescription: null,
+        description: null,
+        images: [],
+        category: ''
+    },
+    {
+        id: '10',
+        slug: 'asmara-44',
+        name: 'Asmara 44',
+        mainImageUrl: `${cloudfront}/dylx6yqyy7kg0bkrr2al.jpg`,
+        listPrice: 3500,
+        salePrice: null,
+        shortDescription: null,
+        description: null,
+        images: [],
+        category: ''
+    },
+    {
+        id: '11',
+        slug: 'asmara-55',
+        name: 'Asmara 55',
+        mainImageUrl: `${cloudfront}/bg8xflenzmwakjkccdav.jpg`,
+        listPrice: 4900,
+        salePrice: null,
+        shortDescription: null,
+        description: null,
+        images: [],
+        category: ''
+    },
+    {
+        id: '12',
+        slug: 'warri-58-with-handles',
+        name: 'Warri 58 with handles',
+        mainImageUrl: `${cloudfront}/IMG_20240129_154327_957.jpg`,
+        listPrice: 5600,
+        salePrice: null,
+        shortDescription: null,
+        description: null,
+        images: [],
+        category: ''
+    },
+    {
+        id: '13',
+        slug: 'warri-58',
+        name: 'Warri 58',
+        mainImageUrl: `${cloudfront}/29350-15/433117825_425881090009621_7806717279459515867.jpg`,
+        listPrice: 4800,
+        salePrice: null,
+        shortDescription: null,
+        description: null,
+        images: [],
+        category: ''
+    },
+    {
+        id: '14',
+        slug: 'kananga',
+        name: 'Kananga',
+        mainImageUrl: `${cloudfront}/403914375_696101329162710_4900006513872604435.jpg`,
+        listPrice: 4600,
+        salePrice: null,
+        shortDescription: null,
+        description: null,
+        images: [],
+        category: ''
+    },
+    {
+        id: '15',
+        slug: 'ulu',
+        name: 'Ulu',
+        mainImageUrl: `${cloudfront}/407270760_1502820600497198_4092292843058767086.jpg`,
+        listPrice: 1900,
+        salePrice: null,
+        shortDescription: null,
+        description: null,
+        images: [],
+        category: ''
+    },
+    {
+        id: '16',
+        slug: 'ridged-trough-80x40x30',
+        name: 'Ridged Trough 80x40x30',
+        mainImageUrl: `${cloudfront}/418604415_907739847607797_5715561604460257336.jpg`,
+        listPrice: 5200,
+        salePrice: null,
+        shortDescription: null,
+        description: null,
+        images: [],
+        category: ''
+    },
+    {
+        id: '17',
+        slug: 'trough-120x35x35',
+        name: 'Trough 120x35x35',
+        mainImageUrl: `/erickss-logo-compressed.png`,
+        listPrice: 5750,
+        salePrice: null,
+        shortDescription: null,
+        description: null,
+        images: [],
+        category: ''
+    },
+    {
+        id: '18',
+        slug: 'cairo-50-3-ring',
+        name: 'Cairo 50 3 Ring',
+        mainImageUrl: `${cloudfront}/IMG_20231221_175931_924.jpg`,
+        listPrice: 5200,
+        salePrice: null,
+        shortDescription: null,
+        description: null,
+        images: [],
+        category: ''
+    },
+    {
+        id: '19',
+        slug: 'chanzo-60-birdbath',
+        name: 'Chanzo 60 Birdbath',
+        mainImageUrl: `${cloudfront}/IMG_20240101_141848_757.jpg`,
+        listPrice: 8400,
+        salePrice: null,
+        shortDescription: null,
+        description: null,
+        images: [],
+        category: ''
+    },
+    {
+        id: '19',
+        slug: 'chanzo-60-birdbath',
+        name: 'Chanzo 60 Birdbath',
+        mainImageUrl: `${cloudfront}/IMG_20240101_141848_757.jpg`,
+        listPrice: 8400,
+        salePrice: null,
+        shortDescription: null,
+        description: null,
+        images: [],
+        category: ''
+    }
+]

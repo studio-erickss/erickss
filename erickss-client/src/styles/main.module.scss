@@ -32,7 +32,7 @@ $header-height: min(10svh, 100px);
     align-items: center;
     width: 95%;
     justify-content: center;
-    padding-top: 5svh;
+    // padding-top: 3svh;
 }
 
 #utility-bar {
@@ -181,15 +181,24 @@ $header-height: min(10svh, 100px);
 #products-container {
     @include flex-column();
     gap: 2rem;
-    width: 100%;
-    flex: 1;
+    align-self: center;
+    // background-color: #25d366;
     justify-content: space-between;
+    // padding: 1rem;
+}
+
+#search-and-filters {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1rem;
 }
 
 #products-filters {
-    align-self: flex-end;
     display: flex;
-    gap: 1rem;
+    gap: .5rem;
+    justify-content: flex-end;
+    flex: 1
 }
 
 #app select {
@@ -197,6 +206,13 @@ $header-height: min(10svh, 100px);
     min-height: max-content;
     height: max-content;
     padding-left: 5px;
+    padding-right: 2rem;
+}
+
+#app label {
+    min-height: max-content;
+    height: max-content;
+    padding: 5px .5rem;
 }
 
 #products-filter-by, #products-sort-by {
@@ -213,21 +229,33 @@ $header-height: min(10svh, 100px);
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
-    justify-content: space-evenly;
+    align-self: center;
+    // background-color: #25d366;
 }
 
 .product-card {
-    min-width: min(382px, 95%);
-    // max-width: 382px;
-    // flex: 1;
-    min-height: 432px;
+    min-width: 300px;
+    flex: 1;
+    height: 432px;
 }
 
 .custom-product-card {
     flex: 1;
     display: flex;
-    min-width: min(382px, 95%);
+    min-width: 300px;
+    // max-width: 100%;
     justify-content: center;
+    min-height: 332px;
+}
+
+#custom-card-image {
+    background-image: url(/images/scattered-forcefields-light.svg)
+}
+
+@media (prefers-color-scheme: dark) {
+    #custom-card-image {
+        background-image: url(/images/scattered-forcefields-dark.svg)
+    }
 }
 
 #products-pagination {
@@ -259,44 +287,38 @@ $header-height: min(10svh, 100px);
     }
 }
 
+@media (min-width: 768px) {
+    .product-card {
+        max-width: 450px;
+    }
+}
+
+// @media (max-width: 1080px) {
+//     .product-card {
+//         min-width: 45%;
+//     }
+// }
+
+// @media (max-width: 600px) {
+//     .product-card {width: 95%;}
+// }
+
+@media (min-width: 400px) {
+    #products-filter-by, #products-sort-by {
+        div {
+            width: max-content;
+        }
+        
+    }
+}
+
 #app footer {
-    width: 100%;
     background-color: var(--theme-green);
-    color: white;
-    padding: 0.5rem;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 2rem;
     margin-top: 2rem;
 }
 
 @media (prefers-color-scheme: dark) {
     #app footer {background-color: var(--darkest-green);}
-}
-
-.footer-section-header {
-    font-size: 24px;
-    color: var(--deep-charcoal-blue);
-    font-weight: bold;
-    margin-bottom: 1rem;
-}
-
-#erickss-footer-section {
-    width: 350px;
-}
-
-.footer-social {
-    display: flex;
-    gap: 0.5rem;
-    align-items: center;
-}
-
-.footer-social-instagram:hover {
-    color: var(--dark-orange);
-}
-.footer-social-facebook:hover {
-    color: teal;
 }
 
 @media (max-width: 666px) {

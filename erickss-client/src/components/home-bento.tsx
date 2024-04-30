@@ -4,17 +4,19 @@ import React from "react";
 import { BentoGrid, BentoGridItem } from "@/components/bento-grid";
 import {
     IconStars,
-    IconGeometry,
-    IconShoppingCartPlus
+    IconGeometry
 } from "@tabler/icons-react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import styles from '@/styles/main.module.scss'
+import IconShoppingCartPlus from "@/components/icon-shopping-cart-plus";
+import ProductCard from "./product-card";
+import { products } from "@/testdata";
 
 
 export function HomeBento() {
     return (
-        <BentoGrid className="max-w-4xl mx-auto md:auto-rows-[20rem]">
+        <BentoGrid className="max-w-6xl mx-auto md:auto-rows-[8.33rem]">
             {items.map((item, i) => (
                 <BentoGridItem
                     key={i}
@@ -299,50 +301,16 @@ const SkeletonFive = () => {
 };
 const items = [
     {
-        title: "Cache pots",
-        description: (
-            <div className={styles['popular-product-desc']}>
-                <div className={styles['popular-product-category']}>category</div>
-                <div className={styles['popular-product-price']}>Ksh. 2,024</div>
-                <div className={styles['popular-product-btns']}>
-                    <button style={{alignSelf: 'flex-end'}} className={`${styles['popular-product-view-btn']} btn`}>view product</button>
-                    <div style={{alignSelf: 'flex-end'}} className={`${styles['popular-product-order-btn']} btn btn-primary`}><IconShoppingCartPlus/></div>
-                </div>
-            </div>
-        ),
-        header: <div className={`${styles['popular-product']} flex flex-1 w-full h-full min-h-[6rem] dark:bg-dot-white/[0.2] bg-dot-black/[0.2] flex-col space-y-2`} style={{backgroundImage: 'url(/images/cachepots.png)'}}></div>,
-        className: "md:col-span-1",
-        // icon: <IconClipboardCopy className="h-4 w-4 text-neutral-500" />,
+        description: ( products.find(p => p.id == '1') && <ProductCard product={products.find(p => p.id == '1')!}/>),
+        className: "md:col-span-1 row-span-3 p-0 space-y-0",
     },
     {
-        description: (
-            <div className={styles['popular-product-desc']}>
-                <div className={styles['popular-product-category']}>category</div>
-                <div className={styles['popular-product-price']}>Ksh. 2,024</div>
-                <div className={styles['popular-product-btns']}>
-                    <button style={{alignSelf: 'flex-end'}} className={`${styles['popular-product-view-btn']} btn`}>view product</button>
-                    <div style={{alignSelf: 'flex-end'}} className={`${styles['popular-product-order-btn']} btn btn-primary`}><IconShoppingCartPlus/></div>
-                </div>
-            </div>
-        ),
-        header: <div className={`${styles['popular-product']} flex flex-1 w-full h-full min-h-[6rem] dark:bg-dot-white/[0.2] bg-dot-black/[0.2] flex-col space-y-2`} style={{backgroundImage: 'url(/images/cachepots.png)'}}></div>,
-        className: "md:col-span-1",
-        // icon: <IconFileBroken className="h-4 w-4 text-neutral-500" />,
+        description: (products.find(p => p.id == '18') && <ProductCard product={products.find(p => p.id == '18')!}/>),
+        className: "md:col-span-1 row-span-3 p-0 space-y-0",
     },
     {
-        description: (
-            <div className={styles['popular-product-desc']}>
-                <div className={styles['popular-product-category']}>category</div>
-                <div className={styles['popular-product-price']}>Ksh. 2,024</div>
-                <div className={styles['popular-product-btns']}>
-                    <button style={{alignSelf: 'flex-end'}} className={`${styles['popular-product-view-btn']} btn`}>view product</button>
-                    <div style={{alignSelf: 'flex-end'}} className={`${styles['popular-product-order-btn']} btn btn-primary`}><IconShoppingCartPlus/></div>
-                </div>
-            </div>
-        ),
-        header: <div className={`${styles['popular-product']} flex flex-1 w-full h-full min-h-[6rem] dark:bg-dot-white/[0.2] bg-dot-black/[0.2] flex-col space-y-2`} style={{backgroundImage: 'url(/images/cachepots.png)'}}></div>,
-        className: "md:col-span-1",
-        // icon: <IconSignature className="h-4 w-4 text-neutral-500" />,
+        description: (products.find(p => p.id == '4') && <ProductCard product={products.find(p => p.id == '4')!}/>),
+        className: "md:col-span-1 row-span-3 p-0 space-y-0",
     },
     {
         title: "",
@@ -352,7 +320,7 @@ const items = [
             </span>
         ),
         header: <SkeletonFour />,
-        className: "md:col-span-2",
+        className: "md:col-span-2 row-span-2",
         icon: <IconStars className="h-4 w-4 text-neutral-500" />,
     },
 
@@ -364,7 +332,7 @@ const items = [
             </span>
         ),
         header: <SkeletonFive />,
-        className: "md:col-span-1",
+        className: "md:col-span-1 row-span-2",
         icon: <IconGeometry className="h-4 w-4 text-neutral-500" />,
     },
 ];
