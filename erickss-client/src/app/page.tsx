@@ -26,18 +26,18 @@ export default function Home() {
 						</div>
 					</div>
 					<div id={styles['hero-main-categories']}>
-						<div className={styles['hero-main-category']} style={{backgroundImage: 'url(/images/water-features.jpg)'}}>
+						<Link href='/products?filterBy=water-features' className={styles['hero-main-category']} style={{ backgroundImage: 'url(/images/water-features.jpg)' }}>
 							<div className={`${styles['hero-main-category-label']} glass`}>Water Features</div>
-						</div>
-						<div className={styles['hero-main-category']} style={{backgroundImage: 'url(/images/charm42.jpg)'}}>
-						<div className={`${styles['hero-main-category-label']} glass`}>Flower Pots</div>
-						</div>
-						<div className={styles['hero-main-category']} style={{backgroundImage: 'url(/images/birdbaths-feeders.jpg)'}}>
-						<div className={`${styles['hero-main-category-label']} glass`}>Birdbaths & Feeders</div>
-						</div>
-						<div className={styles['hero-main-category']} style={{backgroundImage: 'url(/images/water-features.jpg)'}}>
-						<div className={`${styles['hero-main-category-label']} glass`}>Furniture & Sculptures</div>
-						</div>
+						</Link>
+						<Link href='/products?filterBy=flower-pots' className={styles['hero-main-category']} style={{ backgroundImage: 'url(/images/charm42.jpg)' }}>
+							<div className={`${styles['hero-main-category-label']} glass`}>Flower Pots</div>
+						</Link>
+						<Link href='/products?filterBy=birdbaths-and-feeders' className={styles['hero-main-category']} style={{ backgroundImage: 'url(/images/birdbaths-feeders.jpg)' }}>
+							<div className={`${styles['hero-main-category-label']} glass`}>Birdbaths & Feeders</div>
+						</Link>
+						<Link href='/products?filterBy=furniture-and-sculptures' className={styles['hero-main-category']} style={{ backgroundImage: 'url(/images/water-features.jpg)' }}>
+							<div className={`${styles['hero-main-category-label']} glass`}>Furniture & Sculptures</div>
+						</Link>
 					</div>
 				</div>
 				<HomeBento />
@@ -45,12 +45,3 @@ export default function Home() {
 		</>
 	);
 }
-
-// Custom Products
-// Are you looking for a particular custom design or products in non-standard dimensions not found in our inventory? Feel free to inform us, and we’ll collaborate with you to create items tailored to your exact specifications.
-
-// Order Custom Product
-// Design Services
-// We offer our expertise in both space design and product selection, catering to your specific space, budget, and lifestyle requirements. Our dedicated team is committed to assisting you in crafting the ideal living environment.
-
-// Request Design Help
