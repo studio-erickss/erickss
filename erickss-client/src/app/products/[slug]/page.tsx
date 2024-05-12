@@ -4,10 +4,30 @@ import { products } from '@/testdata';
 import IconShoppingCartPlus from '@/components/icon-shopping-cart-plus';
 import { IconPlus } from '@tabler/icons-react'
 import productStyles from '@/styles/product.module.scss'
+import { Metadata } from 'next';
+import { notFound } from 'next/navigation';
 
+
+export async function generateMetadata({ params }: any): Promise<Metadata> {
+    const product = products.find(p => p.slug == params.slug)
+
+    return {
+        title: product?.name,
+        description: product?.shortDescription,
+        openGraph: {
+            images: product ? [product.mainImageUrl, ...product.images] : 'opengraph-image.png',
+        },
+        
+    }
+}
 
 export default function Product({ params }: any) {
     const product = products.find(p => p.slug == params.slug)
+
+    if (!product) {
+        notFound()
+    }
+
     const formatter = new Intl.NumberFormat('en-US', {
         style: 'currency',
         currency: 'KES',
@@ -16,7 +36,7 @@ export default function Product({ params }: any) {
     return (
         <>
             {product ?
-                <section className="flex flex-col gap-4 justify-around flex-1 shrink">
+                <section className="flex flex-col gap-4 justify-between flex-1" style={{ width: '95%' }}>
 
                     <nav className="flex" aria-label="Breadcrumb">
                         <ol className="inline-flex items-center space-x-1 md:space-x-2 rtl:space-x-reverse">
@@ -31,7 +51,7 @@ export default function Product({ params }: any) {
                             <li>
                                 <div className="flex items-center">
                                     <svg className="rtl:rotate-180 w-3 h-3 text-gray-400 mx-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4" />
+                                        <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m1 9 4-4-4-4" />
                                     </svg>
                                     <a href="/products" className="ms-1 text-sm font-medium text-gray-700 hover:text-secondary md:ms-2 dark:text-gray-400 dark:hover:text-white">Products</a>
                                 </div>
@@ -39,7 +59,7 @@ export default function Product({ params }: any) {
                             <li aria-current="page">
                                 <div className="flex items-center">
                                     <svg className="rtl:rotate-180 w-3 h-3 text-gray-400 mx-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4" />
+                                        <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m1 9 4-4-4-4" />
                                     </svg>
                                     <span className="ms-1 text-sm font-medium text-gray-500 md:ms-2 dark:text-gray-400">product</span>
                                 </div>
@@ -47,9 +67,9 @@ export default function Product({ params }: any) {
                         </ol>
                     </nav>
 
-                    <div className="">
+                    <div className="flex-1">
                         <div className='flex flex-wrap gap-4 justify-center'>
-                            <div className="carousel flex flex-1 shrink gap-1 min-w-80" style={{ height: '45svh' }}>
+                            <div className="carousel flex flex-1 shrink gap-1 min-w-80 max-h-[45svh] md:max-h-[80svh]">
                                 {/* MAIN IMAGE */}
                                 <Image className="rounded-md h-full w-auto carousel-item" unoptimized width={100} height={100} style={{ maxWidth: '90%' }}
                                     src={product.mainImageUrl} alt={`Product Image - ${product.name}`}

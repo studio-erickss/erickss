@@ -6,7 +6,12 @@ import Skeleton from '@/components/skeleton';
 import CustomProductCard from '@/components/custom-product-card';
 import { Product, ProductsResponse } from '@/types';
 import { products } from '@/testdata';
+import { Metadata } from 'next';
 
+
+export const metadata: Metadata = {
+    title: "Products"
+}
 
 export default async function Products({ params, searchParams }: any) {
     const productsData = await getServerSideProps(searchParams)
