@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import { Poppins } from 'next/font/google';
 import "@/styles/globals.css";
 import styles from '@/styles/main.module.scss'
@@ -7,6 +6,7 @@ import Header from "@/components/header";
 import Footer from "@/components/footer";
 import Link from "next/link";
 import Image from "next/image";
+import { GoogleAnalytics } from '@next/third-parties/google'
 
 
 // const inter = Inter({ subsets: ["latin"] });
@@ -19,8 +19,13 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-	title: "Studio Erickss",
-	description: "Your home and garden partner.",
+	title: {
+		default: "Studio Erickss",
+		template: "%s | Studio Erickss"
+	},
+	description: "We are your home and garden partner. Let's create something beautiful together.",
+	metadataBase: new URL(process.env.VERCEL_PROJECT_PRODUCTION_URL ?? process.env.VERCEL_BRANCH_URL ?? process.env.VERCEL_URL ?? 
+		process.env.METADATA_BASE ?? `http://localhost:${process.env.PORT || 3000}`),
 };
 
 export default function RootLayout({
@@ -41,6 +46,7 @@ export default function RootLayout({
 					</Link>
 				</div>
 			</body>
+			{process.env.ENABLE_GOOGLE_ANALYTICS && <GoogleAnalytics gaId="G-Z46KS932QW"/>}
 		</html>
 	);
 }
