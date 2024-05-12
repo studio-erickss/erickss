@@ -7,6 +7,8 @@ import Footer from "@/components/footer";
 import Link from "next/link";
 import Image from "next/image";
 import { GoogleAnalytics } from '@next/third-parties/google'
+import { Analytics } from "@vercel/analytics/react"
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 
 // const inter = Inter({ subsets: ["latin"] });
@@ -47,6 +49,8 @@ export default function RootLayout({
 				</div>
 			</body>
 			{process.env.ENABLE_GOOGLE_ANALYTICS && <GoogleAnalytics gaId="G-Z46KS932QW"/>}
+			{process.env.ENABLE_VERCEL_ANALYTICS && <Analytics/>}
+			{process.env.ENABLE_VERCEL_SPEED_INSIGHTS && <SpeedInsights/>}
 		</html>
 	);
 }
