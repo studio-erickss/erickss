@@ -10,6 +10,6 @@ export default function robots(): MetadataRoute.Robots {
             allow: '/',
             disallow: ['/cart', '/checkout']
         },
-        sitemap: `${BASEURL}/sitemap.xml`,
+        sitemap: `${BASEURL.startsWith('http') ? BASEURL : `https://${BASEURL}`}/sitemap.xml`,
     }
 }

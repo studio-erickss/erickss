@@ -20,14 +20,16 @@ const poppins = Poppins({
   weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900']
 });
 
+const BASEURL = process.env.VERCEL_PROJECT_PRODUCTION_URL ?? process.env.VERCEL_BRANCH_URL ?? process.env.VERCEL_URL ?? 
+process.env.METADATA_BASE ?? `http://localhost:${process.env.PORT || 3000}`
+
 export const metadata: Metadata = {
 	title: {
 		default: "Studio Erickss",
 		template: "%s | Studio Erickss"
 	},
 	description: "We are your home and garden partner. Let's create something beautiful together.",
-	metadataBase: new URL(process.env.VERCEL_PROJECT_PRODUCTION_URL ?? process.env.VERCEL_BRANCH_URL ?? process.env.VERCEL_URL ?? 
-		process.env.METADATA_BASE ?? `http://localhost:${process.env.PORT || 3000}`),
+	metadataBase: new URL(BASEURL.startsWith('http') ? BASEURL : `https://${BASEURL}`),
 };
 
 export default function RootLayout({
