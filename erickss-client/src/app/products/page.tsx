@@ -63,9 +63,6 @@ export default async function Products({ params, searchParams }: any) {
                         <Skeleton className={styles['product-card']} />
                     </>
                 }
-                {/* <CustomProductCard src='url(/images/protruding-squares.svg)' /> */}
-                {/* <CustomProductCard src='url(/images/pattern-randomized.svg)' /> */}
-                {/* <CustomProductCard src='url(/images/scattered-forcefields.svg)' /> */}
                 <CustomProductCard />
 
             </div>
@@ -73,10 +70,10 @@ export default async function Products({ params, searchParams }: any) {
             <div id={styles['products-pagination']}>
                 {/* <div className={`dull-text text-sm underline-offset-2 underline`}>97 | Total products</div> */}
                 <div className="join">
-                    <button className="join-item btn"><IconChevronsLeft /></button>
-                    <button className="join-item btn"><IconChevronLeft /> Previous (1)</button>
-                    <button className="join-item btn btn-disabled">2</button>
-                    <button className="join-item btn">Next (3) <IconChevronRight /></button>
+                    <button className="join-item btn btn-disabled"><IconChevronsLeft /></button>
+                    <button className="join-item btn btn-disabled"><IconChevronLeft /> Previous</button>
+                    <button className="join-item btn btn-disabled">1</button>
+                    <button className="join-item btn">Next (2) <IconChevronRight /></button>
                     <button className="join-item btn"><IconChevronsRight /></button>
                 </div>
             </div>

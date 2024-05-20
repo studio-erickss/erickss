@@ -9,19 +9,20 @@ export default function sitemap(): MetadataRoute.Sitemap {
     return [
         {
             url: `${BASE_URL}`,
-            lastModified: new Date().toISOString()
+            lastModified: new Date("2024-05-12T16:44:16.388Z").toISOString()
         },
         {
             url: `${BASE_URL}/products`,
-        },
-        {
-            url: `${BASE_URL}/contact-us`,
             lastModified: new Date().toISOString()
         },
-        {
-            url: `${BASE_URL}/design-services`,
-            lastModified: new Date().toISOString()
-        },
-        ...products.map(product => ({ url: `${BASE_URL}/products/${product.slug}` }))
+        // {
+        //     url: `${BASE_URL}/contact-us`,
+        //     lastModified: new Date().toISOString()
+        // },
+        // {
+        //     url: `${BASE_URL}/design-services`,
+        //     lastModified: new Date().toISOString()
+        // },
+        ...products.map(product => ({ url: `${BASE_URL}/products/${product.slug}`, lastModified: new Date().toISOString() }))
     ]
 }

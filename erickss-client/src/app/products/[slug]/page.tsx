@@ -13,7 +13,7 @@ export async function generateMetadata({ params }: any): Promise<Metadata> {
 
     return {
         title: product?.name,
-        description: product?.shortDescription,
+        description: `${product?.name} - ${product?.shortDescription}`,
         openGraph: {
             images: product ? [product.mainImageUrl, ...product.images] : 'opengraph-image.png',
         },
@@ -61,7 +61,7 @@ export default function Product({ params }: any) {
                                     <svg className="rtl:rotate-180 w-3 h-3 text-gray-400 mx-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
                                         <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m1 9 4-4-4-4" />
                                     </svg>
-                                    <span className="ms-1 text-sm font-medium text-gray-500 md:ms-2 dark:text-gray-400">product</span>
+                                    <span className="ms-1 text-sm font-medium text-gray-500 md:ms-2 dark:text-gray-400">{product.name}</span>
                                 </div>
                             </li>
                         </ol>
@@ -69,13 +69,13 @@ export default function Product({ params }: any) {
 
                     <div className="flex-1">
                         <div className='flex flex-wrap gap-4 justify-center'>
-                            <div className="carousel flex flex-1 shrink gap-1 min-w-80 max-h-[45svh] md:max-h-[80svh]">
+                            <div className="carousel flex flex-1 shrink gap-1 min-w-80">
                                 {/* MAIN IMAGE */}
-                                <Image className="rounded-md h-full w-auto carousel-item" unoptimized width={100} height={100} style={{ maxWidth: '90%' }}
+                                <Image className="rounded-md h-full carousel-item object-cover" unoptimized width={100} height={100} style={{ width: product.images.length ? '90%' : '100%'}}
                                     src={product.mainImageUrl} alt={`Product Image - ${product.name}`}
                                     placeholder='blur' blurDataURL='/erickss-logo-compressed.png' />
                                 {/* OTHER IMAGES */}
-                                {product.images.map((image, index) => <Image key={index} className="rounded-md h-full w-auto carousel-item" unoptimized width={100} height={100} style={{ maxWidth: '90%' }}
+                                {product.images.map((image, index) => <Image key={index} className="rounded-md h-full carousel-item object-cover" unoptimized width={100} height={100} style={{ width: '90%'}}
                                     src={image} alt={`Product Image - ${product.name}`}
                                     placeholder='blur' blurDataURL='/erickss-logo-compressed.png' />)}
                             </div>
@@ -122,11 +122,15 @@ export default function Product({ params }: any) {
                                 <hr className="my-2 md:my-3 border-gray-200 dark:border-gray-800" />
 
                                 <p className="text-gray-500 dark:text-gray-400 mb-2">
-                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet laboriosam harum, pariatur at dicta ipsa fugiat consequuntur id architecto numquam laudantium praesentium saepe vero maiores delectus neque eaque velit quisquam?
+                                    {product.shortDescription}
                                 </p>
 
+                                <Image className="rounded-md w-auto carousel-item max-h-[50svh]" unoptimized width={100} height={100}
+                                    src={product.mainImageUrl} alt={`Product Image - ${product.name}`}
+                                    placeholder='blur' blurDataURL='/erickss-logo-compressed.png' />
+
                                 <p className="text-gray-500 dark:text-gray-400">
-                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure nostrum tempora similique excepturi pariatur non! Laborum, veritatis culpa provident error tenetur cupiditate voluptatum. Aspernatur perspiciatis, tenetur dicta id quae nostrum.
+                                    {product.description}
                                 </p>
                             </div>
                         </div>
