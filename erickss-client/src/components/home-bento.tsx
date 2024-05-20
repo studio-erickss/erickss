@@ -309,7 +309,7 @@ const items = [
         className: "md:col-span-1 row-span-3 p-0 space-y-0",
     },
     {
-        description: (products.find(p => p.id == '4') && <ProductCard product={products.find(p => p.id == '4')!}/>),
+        description: (products.find(p => p.id == '11') && <ProductCard product={products.find(p => p.id == '11')!}/>),
         className: "md:col-span-1 row-span-3 p-0 space-y-0",
     },
     {
