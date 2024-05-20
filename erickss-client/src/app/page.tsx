@@ -35,7 +35,7 @@ export default function Home() {
 						<Link href='/products?filterBy=birdbaths-and-feeders' className={styles['hero-main-category']} style={{ backgroundImage: 'url(/images/birdbaths-feeders.jpg)' }}>
 							<div className={`${styles['hero-main-category-label']} glass`}>Birdbaths & Feeders</div>
 						</Link>
-						<Link href='/products?filterBy=furniture-and-sculptures' className={styles['hero-main-category']} style={{ backgroundImage: 'url(/images/water-features.jpg)' }}>
+						<Link href='/products?filterBy=furniture-and-sculptures' className={styles['hero-main-category']} style={{ backgroundImage: 'url(/images/spheres.jpg)' }}>
 							<div className={`${styles['hero-main-category-label']} glass`}>Furniture & Sculptures</div>
 						</Link>
 					</div>

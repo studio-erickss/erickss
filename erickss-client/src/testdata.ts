@@ -287,7 +287,7 @@ export const products: Product[] = [
     {
         id: '24',
         slug: 'ridged-tuni-mini',
-        name: 'Ridged Muni Mini',
+        name: 'Ridged Tuni Mini',
         mainImageUrl: `${COMPRESSOR_URL}/Ridged Tuni mini - 01.jpg`,
         listPrice: 1300,
         salePrice: null,
