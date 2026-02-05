@@ -81,31 +81,31 @@ export default function Product({ params }: any) {
                             </div>
 
                             <div className="min-w-80" style={{ maxWidth: '600px' }}>
-                                <div className="gap-4 flex items-center mb-3" style={{
-                                    bottom: '1rem', position: 'sticky'
-                                }}>
-                                    <div className="flex items-center">
-                                        <button type="button" id="decrement-button" data-input-counter-decrement="counter-input" className="inline-flex shrink-0 items-center justify-center rounded-md border border-gray-300 bg-base-200 hover:bg-base-300 focus:outline-none focus:ring-2 focus:ring-gray-100 dark:border-gray-600 dark:hover:bg-base-300 dark:focus:ring-gray-700">
-                                            <svg className="h-2.5 w-2.5 text-gray-900 dark:text-white" aria-hidden="true" xmlns="http:www.w3.org/2000/svg" fill="none" viewBox="0 0 18 2">
-                                                <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M1 1h16" />
-                                            </svg>
-                                        </button>
-                                        <input type="text" id="counter-input" data-input-counter className="w-10 shrink-0 border-0 bg-transparent text-center text-sm font-medium text-gray-900 focus:outline-none focus:ring-0 dark:text-white" placeholder="" defaultValue="1" required />
-                                        <button type="button" id="increment-button" data-input-counter-increment="counter-input" className="inline-flex shrink-0 items-center justify-center rounded-md border border-gray-300 bg-base-200 hover:bg-base-300 focus:outline-none focus:ring-2 focus:ring-gray-100 dark:border-gray-600 dark:hover:bg-base-300 dark:focus:ring-gray-700">
-                                            <svg className="h-2.5 w-2.5 text-gray-900 dark:text-white" aria-hidden="true" xmlns="http:www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18">
-                                                <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 1v16M1 9h16" />
-                                            </svg>
-                                        </button>
-                                    </div>
-                                    <button className="btn btn-primary flex items-center justify-center py-2.5 flex-1"><IconShoppingCartPlus />Order</button>
-                                </div>
+                                {/*<div className="gap-4 flex items-center mb-3" style={{*/}
+                                {/*    bottom: '1rem', position: 'sticky'*/}
+                                {/*}}>*/}
+                                {/*    <div className="flex items-center">*/}
+                                {/*        <button type="button" id="decrement-button" data-input-counter-decrement="counter-input" className="inline-flex shrink-0 items-center justify-center rounded-md border border-gray-300 bg-base-200 hover:bg-base-300 focus:outline-none focus:ring-2 focus:ring-gray-100 dark:border-gray-600 dark:hover:bg-base-300 dark:focus:ring-gray-700">*/}
+                                {/*            <svg className="h-2.5 w-2.5 text-gray-900 dark:text-white" aria-hidden="true" xmlns="http:www.w3.org/2000/svg" fill="none" viewBox="0 0 18 2">*/}
+                                {/*                <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M1 1h16" />*/}
+                                {/*            </svg>*/}
+                                {/*        </button>*/}
+                                {/*        <input type="text" id="counter-input" data-input-counter className="w-10 shrink-0 border-0 bg-transparent text-center text-sm font-medium text-gray-900 focus:outline-none focus:ring-0 dark:text-white" placeholder="" defaultValue="1" required />*/}
+                                {/*        <button type="button" id="increment-button" data-input-counter-increment="counter-input" className="inline-flex shrink-0 items-center justify-center rounded-md border border-gray-300 bg-base-200 hover:bg-base-300 focus:outline-none focus:ring-2 focus:ring-gray-100 dark:border-gray-600 dark:hover:bg-base-300 dark:focus:ring-gray-700">*/}
+                                {/*            <svg className="h-2.5 w-2.5 text-gray-900 dark:text-white" aria-hidden="true" xmlns="http:www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18">*/}
+                                {/*                <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 1v16M1 9h16" />*/}
+                                {/*            </svg>*/}
+                                {/*        </button>*/}
+                                {/*    </div>*/}
+                                {/*    <button className="btn btn-primary flex items-center justify-center py-2.5 flex-1"><IconShoppingCartPlus />Order</button>*/}
+                                {/*</div>*/}
 
                                 <h1
                                     className="text-lg font-semibold text-gray-900 sm:text-2xl dark:text-white"
                                 >
                                     {product.name}
                                 </h1>
-                                <div className='dull-text bg-base-200 px-2 py-1 rounded-lg' style={{ width: 'max-content' }}>category</div>
+                                <div className='dull-text bg-base-200 px-2 py-1 rounded-lg' style={{ width: 'max-content' }}>{product.category}</div>
 
                                 <hr className="my-2 md:my-3 border-gray-200 dark:border-gray-800" />
 
@@ -121,18 +121,18 @@ export default function Product({ params }: any) {
 
                                 <hr className="my-2 md:my-3 border-gray-200 dark:border-gray-800" />
 
-                                <p className="text-gray-500 dark:text-gray-400 mb-2">
+                                <p className="text-gray-500 dark:text-gray-400 mb-2 w-96">
                                     {product.shortDescription}
                                 </p>
 
                                 <Image className="rounded-md w-auto carousel-item max-h-[50svh]" unoptimized width={100} height={100}
                                     src={product.mainImageUrl} alt={`Product Image - ${product.name}`}
                                     placeholder='blur' blurDataURL='/erickss-logo-compressed.png' />
-
-                                <p className="text-gray-500 dark:text-gray-400">
-                                    {product.description}
-                                </p>
                             </div>
+
+                            <p className="text-gray-500 dark:text-gray-400">
+                                {product.longDescription}
+                            </p>
                         </div>
                     </div>
                 </section>

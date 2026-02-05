@@ -44,7 +44,7 @@ export default function RootLayout({
 					<Header/>
 					<main>{children}</main>
 					<Footer/>
-					<div id={styles['under-maintenance']}>under maintenance</div>
+					{/*<div id={styles['under-maintenance']}>under maintenance</div>*/}
 					<Link id={styles.whatsapp} aria-label="Chat on WhatsApp" href="https://wa.me/254746767352" target="_blank">
 						<Image id={styles['whatsapp-icon']} alt="Chat on WhatsApp" src="/images/WhatsApp.svg" width={32} height={32}/>
 					</Link>

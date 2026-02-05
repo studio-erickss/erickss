@@ -6,9 +6,10 @@ export interface Product {
     listPrice: number
     salePrice: number | null
     shortDescription: string | null
-    description: string | null
+    longDescription: string | null
     images: string[]
     category: string
+    measurements: string
 }
 
 export interface Response {

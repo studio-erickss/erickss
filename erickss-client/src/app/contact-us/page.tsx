@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 
 export default function ContactUs() {
     return (
-        <section className="w-full h-full" style={{ backgroundImage: 'url(/images/undraw_contact_us_re_4qqt.svg)', }}>
+        <section className="w-full h-full">
             <ContactForm />
         </section>
     );

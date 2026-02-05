@@ -10,15 +10,16 @@ export const products: Product[] = [
         mainImageUrl: `${COMPRESSOR_URL}/Charm 42 - 01.jpg`,
         listPrice: 11000,
         salePrice: 10300,
-        shortDescription: "L(mm) 420 W(mm) 420 H(mm) 700",
-        description: null,
+        measurements: "L(mm) 420 W(mm) 420 H(mm) 700",
+        shortDescription: "A tall, modern statement planter with a balanced square profile, perfect for showcasing feature plants at entrances, patios, and indoor spaces.",
+        longDescription: "The Charm 42 flower pot is a sleek, contemporary planter designed to elevate both indoor and outdoor spaces. With its generous proportions and elegant height, this tall planter is ideal for feature plants, decorative foliage, or sculptural greenery. Its clean, symmetrical shape makes it a great choice for entryways, balconies, patios, office lobbies, and garden pathways. Whether used alone as a focal point or paired for a symmetrical look, the Charm 42 adds height, structure, and modern style to any landscape or interior design. Perfect for homeowners, landscapers, and commercial spaces looking for a durable decorative planter.",
         slug: 'charm-42',
         images: [
             `${CLOUDFRONT}/425006178_1049635029464617_6548703622942224861_n.jpeg`,
             `${CLOUDFRONT}/425160658_2132525710448331_7274797510840208439_n.jpeg`,
             `${CLOUDFRONT}/425134503_728912442310350_2876170337719638151_n.jpeg`
         ],
-        category: ''
+        category: 'flower-pots'
     },
     {
         id: '2',
@@ -27,10 +28,11 @@ export const products: Product[] = [
         mainImageUrl: `${COMPRESSOR_URL}/Kivu 70 - 01.jpg`,
         listPrice: 6100,
         salePrice: null,
-        shortDescription: "L(mm) 700 W(mm) 700 H(mm) 400",
-        description: null,
+        measurements: "L(mm) 700 W(mm) 700 H(mm) 400",
+        shortDescription: "A wide, low-profile planter that's perfect for shrubs, mixed arrangements, and statement greenery in gardens and outdoor living spaces.",
+        longDescription: "The Kivu 70 planter offers a broad planting area with a low, contemporary silhouette that works beautifully in both residential and commercial landscapes. Its wide design makes it ideal for garden borders, patios, courtyards, and poolside landscaping, where a grounded, structured look is desired. It is perfect for creating layered plant arrangements and adding visual weight to open spaces. A practical and stylish solution for anyone seeking a large outdoor plant pot that blends modern design with generous planting capacity.",
         images: [],
-        category: ''
+        category: 'flower-pots'
     },
     {
         id: '3',
@@ -39,10 +41,11 @@ export const products: Product[] = [
         mainImageUrl: `${COMPRESSOR_URL}/Tanganyika 94 - 01.jpg`,
         listPrice: 6800,
         salePrice: null,
-        shortDescription: "L(mm) 940 W(mm) 940 H(mm) 400",
-        description: null,
+        measurements: "L(mm) 940 W(mm) 940 H(mm) 400",
+        shortDescription: "An extra-wide planter designed for bold landscaping, perfect for large plants, shrubs, or layered garden arrangements.",
+        longDescription: "Make a bold landscaping statement with the Tanganyika 94 flower pot, a generously sized planter built for impactful plant displays. Its expansive design provides substantial space for large shrubs, grouped plants, or decorative garden arrangements. The low, wide profile is ideal for driveways, garden edges, commercial entrances, and expansive patios, where it can anchor a space and add balance and structure. This planter delivers both scale and style for residential and commercial landscaping.",
         images: [],
-        category: ''
+        category: 'flower-pots'
     },
     // {
     //     id: '4',
@@ -51,10 +54,11 @@ export const products: Product[] = [
     //     mainImageUrl: `${COMPRESSOR_URL}/Ridged Nyala 40 - 01.jpg`,
     //     listPrice: 3000,
     //     salePrice: 2800,
-    //     shortDescription: "L(mm)  W(mm)  H(mm) ",
-    //     description: null,
+    //     measurements: "L(mm)  W(mm)  H(mm) ",
+    //     shortDescription: null,
+    //     longDescription: null,
     //     images: [],
-    //     category: ''
+    //     category: 'flower-pots'
     // },
     // {
     //     id: '5',
@@ -63,10 +67,11 @@ export const products: Product[] = [
     //     mainImageUrl: `${COMPRESSOR_URL}/Nyala 40 - 01.jpg`,
     //     listPrice: 2500,
     //     salePrice: null,
-    //     shortDescription: "L(mm)  W(mm)  H(mm) ",
-    //     description: null,
+    //     measurements: "L(mm)  W(mm)  H(mm) ",
+    //     shortDescription: null,
+    //     longDescription: null,
     //     images: [],
-    //     category: ''
+    //     category: 'flower-pots'
     // },
     // {
     //     id: '6',
@@ -75,10 +80,11 @@ export const products: Product[] = [
     //     mainImageUrl: `${COMPRESSOR_URL}/Aba Ridge 37 - 01.jpg`,
     //     listPrice: 4900,
     //     salePrice: null,
-    //     shortDescription: "L(mm)  W(mm)  H(mm) ",
-    //     description: null,
+    //     measurements: "L(mm)  W(mm)  H(mm) ",
+    //     shortDescription: null,
+    //     longDescription: null,
     //     images: [],
-    //     category: ''
+    //     category: 'flower-pots'
     // },
     {
         id: '7',
@@ -87,10 +93,11 @@ export const products: Product[] = [
         mainImageUrl: `${COMPRESSOR_URL}/Ridged Mwanza 50 - 01.jpg`,
         listPrice: 7700,
         salePrice: null,
-        shortDescription: "L(mm) 500 W(mm) 50 H(mm) 650",
-        description: null,
+        measurements: "L(mm) 500 W(mm) 50 H(mm) 650",
+        shortDescription: "A tall ridged planter that adds texture and vertical interest to gardens, patios, and entryways.",
+        longDescription: "The Mwanza Ridge 50 planter stands out with its textured ridged design, adding depth and character to any planting display. Its tall form makes it ideal for feature plants, palms, ornamental grasses, or flowering arrangements that benefit from added height. Perfect for doorways, patios, balconies, and indoor corners, this planter brings both structure and decorative appeal. A stylish choice for modern and classic spaces alike.",
         images: [],
-        category: ''
+        category: 'flower-pots'
     },
     {
         id: '8',
@@ -99,10 +106,11 @@ export const products: Product[] = [
         mainImageUrl: `${COMPRESSOR_URL}/Mwanza 50 - 01.jpg`,
         listPrice: 5400,
         salePrice: null,
-        shortDescription: "L(mm) 500 W(mm) 500 H(mm) 650",
-        description: null,
+        measurements: "L(mm) 500 W(mm) 500 H(mm) 650",
+        shortDescription: "A tall, elegant planter ideal for statement plants and stylish indoor or outdoor décor.",
+        longDescription: "The Mwanza 50 flower pot combines height and clean design to create a versatile planter suited for a variety of spaces. Perfect for feature plants, small trees, and dramatic foliage, it works beautifully in home entrances, patios, terraces, office spaces, and hotel lobbies. Its simple yet refined form makes it easy to integrate into modern and minimalist décor styles.",
         images: [],
-        category: ''
+        category: 'flower-pots'
     },
     {
         id: '9',
@@ -111,10 +119,11 @@ export const products: Product[] = [
         mainImageUrl: `${COMPRESSOR_URL}/Victoria 64 - 01.jpg`,
         listPrice: 3000,
         salePrice: 2800,
-        shortDescription: "L(mm) 640 W(mm) 640 H(mm) 200",
-        description: null,
+        measurements: "L(mm) 640 W(mm) 640 H(mm) 200",
+        shortDescription: "A wide, shallow birdbath that attracts birds while adding charm and life to your garden.",
+        longDescription: "The Victoria 64 birdbath is designed to bring birds closer while enhancing the beauty of your outdoor space. Its wide basin provides ample space for birds to drink and bathe, helping create a lively and natural garden environment. With its low profile, it blends seamlessly into lawns, flower beds, and landscaped gardens while adding a decorative focal point.",
         images: [],
-        category: ''
+        category: 'birdbaths-and-feeders'
     },
     {
         id: '10',
@@ -123,10 +132,11 @@ export const products: Product[] = [
         mainImageUrl: `${COMPRESSOR_URL}/Asmara 44 - 01.jpg`,
         listPrice: 6100,
         salePrice: null,
-        shortDescription: "L(mm) 440 W(mm) 440 H(mm) 460",
-        description: null,
+        measurements: "L(mm) 440 W(mm) 440 H(mm) 460",
+        shortDescription: "A compact yet tall planter perfect for smaller spaces that still need vertical plant impact.",
+        longDescription: "The Asmara 44 planter is a versatile option for adding greenery to compact areas without sacrificing height. Ideal for balconies, small patios, entryways, and indoor plant styling, it suits medium-sized plants and decorative foliage. A smart solution for homeowners and designers looking for a space-saving decorative planter.",
         images: [],
-        category: ''
+        category: 'flower-pots'
     },
     {
         id: '11',
@@ -135,10 +145,11 @@ export const products: Product[] = [
         mainImageUrl: `${COMPRESSOR_URL}/Asmara 55 - 01.jpg`,
         listPrice: 8400,
         salePrice: null,
-        shortDescription: "L(mm) 550 W(mm) 550 H(mm) 580",
-        description: null,
+        measurements: "L(mm) 550 W(mm) 550 H(mm) 580",
+        shortDescription: "A tall, well-balanced planter that adds height and elegance to patios, entrances, and garden spaces.",
+        longDescription: "The Asmara 55 flower pot brings vertical interest and refined style to indoor and outdoor environments. Ideal for feature plants, leafy greens, and flowering arrangements, it works beautifully in doorways, walkways, patios, and commercial entrances. A versatile planter suited for modern landscaping and classic garden designs.",
         images: [],
-        category: ''
+        category: 'flower-pots'
     },
     {
         id: '12',
@@ -147,10 +158,11 @@ export const products: Product[] = [
         mainImageUrl: `${COMPRESSOR_URL}/Warri 58 with Handles - 01.jpg`,
         listPrice: 8700,
         salePrice: null,
-        shortDescription: "L(mm) 580 W(mm) 580 H(mm) 600",
-        description: null,
+        measurements: "L(mm) 580 W(mm) 580 H(mm) 600",
+        shortDescription: "A large, practical planter with built-in handles for easier positioning and stylish greenery displays.",
+        longDescription: "The Warri 58 with Handles planter combines generous planting space with added functionality. Suitable for larger plants and shrubs, the integrated handles make repositioning easier. Ideal for patios, courtyards, gardens, and commercial landscapes where both style and convenience are important.",
         images: [],
-        category: ''
+        category: 'flower-pots'
     },
     {
         id: '13',
@@ -159,10 +171,11 @@ export const products: Product[] = [
         mainImageUrl: `${COMPRESSOR_URL}/Warri 58 - 01.jpg`,
         listPrice: 7400,
         salePrice: null,
-        shortDescription: "L(mm) 580 W(mm) 580 H(mm) 600",
-        description: null,
+        measurements: "L(mm) 580 W(mm) 580 H(mm) 600",
+        shortDescription: "A spacious, stylish planter ideal for shrubs, feature plants, and bold garden arrangements.",
+        longDescription: "The Warri 58 flower pot offers a wide planting area and tall profile, making it perfect for lush shrubs and statement greenery. Ideal for home gardens, patios, office courtyards, and commercial entrances, it provides versatility in both modern and traditional settings.",
         images: [],
-        category: ''
+        category: 'flower-pots'
     },
     {
         id: '14',
@@ -171,10 +184,11 @@ export const products: Product[] = [
         mainImageUrl: `${COMPRESSOR_URL}/Kananga - 01.jpg`,
         listPrice: 5600,
         salePrice: null,
-        shortDescription: "L(mm) 450 W(mm) 450 H(mm) 650",
-        description: null,
+        measurements: "L(mm) 450 W(mm) 450 H(mm) 650",
+        shortDescription: "A decorative garden sculpture that adds artistic character and a focal point to outdoor spaces.",
+        longDescription: "The Kananga sculpture is a striking decorative piece designed to enhance gardens, patios, and landscaped areas. Its sculptural form introduces texture and artistic presence, making it a perfect focal point among plants and outdoor décor.",
         images: [`${COMPRESSOR_URL}/Kananga - 02.jpg`],
-        category: ''
+        category: 'sculptures'
     },
     {
         id: '15',
@@ -183,10 +197,11 @@ export const products: Product[] = [
         mainImageUrl: `${COMPRESSOR_URL}/Ulu - 01.jpg`,
         listPrice: 2300,
         salePrice: null,
-        shortDescription: "L(mm) 300 W(mm) 300 H(mm) 300",
-        description: null,
+        measurements: "L(mm) 300 W(mm) 300 H(mm) 300",
+        shortDescription: "A compact, versatile planter perfect for small plants, herbs, and decorative indoor or outdoor use.",
+        longDescription: "The Ulu flower pot is a compact and practical planter designed for smaller plants and tight spaces. Ideal for herbs, succulents, and decorative greenery, it works well on balconies, patios, and indoor shelves.",
         images: [],
-        category: ''
+        category: 'flower-pots'
     },
     {
         id: '16',
@@ -195,10 +210,11 @@ export const products: Product[] = [
         mainImageUrl: `${COMPRESSOR_URL}/Ridged Tough 80x40x30 - 01.jpg`,
         listPrice: 9100,
         salePrice: null,
-        shortDescription: "L(mm) 800 W(mm) 400 H(mm) 300",
-        description: null,
+        measurements: "L(mm) 800 W(mm) 400 H(mm) 300",
+        shortDescription: "A textured trough-style water feature that brings movement, sound, and modern design to outdoor spaces.",
+        longDescription: "The Ridged Trough 80x40x30 water feature adds calm, movement, and visual texture to gardens and patios. Its long rectangular shape and ridged surface create a stylish focal point while enhancing the soothing effect of flowing water.",
         images: [],
-        category: ''
+        category: 'water-features'
     },
     // {
     //     id: '17',
@@ -207,10 +223,11 @@ export const products: Product[] = [
     //     mainImageUrl: `${CLOUDFRONT}/375545246_1229893637683629_8434508144328222437_n.jpg`,
     //     listPrice: 5750,
     //     salePrice: null,
-    //     shortDescription: "L(mm)  W(mm)  H(mm) ",
-    //     description: null,
+    //     measurements: "L(mm)  W(mm)  H(mm) ",
+    //     shortDescription: null,
+    //     longDescription: null,
     //     images: [],
-    //     category: ''
+    //     category: 'water-features'
     // },
     {
         id: '18',
@@ -219,10 +236,11 @@ export const products: Product[] = [
         mainImageUrl: `${COMPRESSOR_URL}/Cairo 50 3 Ring - 01.jpg`,
         listPrice: 6900,
         salePrice: null,
-        shortDescription: "L(mm) 500 W(mm) 500 H(mm) 500",
-        description: null,
+        measurements: "L(mm) 500 W(mm) 500 H(mm) 500",
+        shortDescription: "A decorative planter with ring detailing that adds texture and visual interest to plant displays.",
+        longDescription: "The Cairo 50 3 Ring planter features distinctive ringed detailing that adds texture and depth. Ideal for medium to large plants, it enhances patios, entrances, and landscaped gardens with decorative style and practical planting space.",
         images: [],
-        category: ''
+        category: 'flower-pots'
     },
     {
         id: '19',
@@ -231,10 +249,11 @@ export const products: Product[] = [
         mainImageUrl: `${COMPRESSOR_URL}/Chanzo 60 Birdbath - 01.jpg`,
         listPrice: 8800,
         salePrice: 8400,
-        shortDescription: "L(mm) 600 W(mm) 600 H(mm) 880",
-        description: null,
+        measurements: "L(mm) 600 W(mm) 600 H(mm) 880",
+        shortDescription: "A tall, elegant birdbath that attracts birds while serving as a striking garden feature.",
+        longDescription: "The Chanzo 60 Birdbath attracts birds while adding height and elegance to your garden. Its elevated basin provides a safe and inviting place for birds to drink and bathe, doubling as a decorative outdoor focal point.",
         images: [],
-        category: ''
+        category: 'birdbaths-and-feeders'
     },
     {
         id: '20',
@@ -243,10 +262,11 @@ export const products: Product[] = [
         mainImageUrl: `${COMPRESSOR_URL}/Saza 41 - 01.jpg`,
         listPrice: 6000,
         salePrice: null,
-        shortDescription: "L(mm) 410 W(mm) 410 H(mm) 580",
-        description: null,
+        measurements: "L(mm) 410 W(mm) 410 H(mm) 580",
+        shortDescription: "A tall, compact planter that brings elegance and vertical greenery to small and medium spaces.",
+        longDescription: "The Saza 41 flower pot is a stylish tall planter designed to make plants stand out without taking up too much floor space. Ideal for entryways, balconies, patios, and indoor corners.",
         images: [],
-        category: ''
+        category: 'flower-pots'
     },
     {
         id: '21',
@@ -255,10 +275,11 @@ export const products: Product[] = [
         mainImageUrl: `${COMPRESSOR_URL}/Nyanga - 01.jpg`,
         listPrice: 12000,
         salePrice: 11100,
-        shortDescription: "L(mm) 700 W(mm) 700 H(mm) 1200",
-        description: null,
+        measurements: "L(mm) 700 W(mm) 700 H(mm) 1200",
+        shortDescription: "An extra-tall statement planter designed for large feature plants and dramatic landscape styling.",
+        longDescription: "The Nyanga flower pot is a bold, extra-tall planter built to create striking vertical impact. Perfect for palms, ornamental trees, and large shrubs in hotel entrances, office buildings, patios, and spacious gardens.",
         images: [],
-        category: ''
+        category: 'flower-pots'
     },
     {
         id: '22',
@@ -267,10 +288,11 @@ export const products: Product[] = [
         mainImageUrl: `${COMPRESSOR_URL}/Nyanga with handles - 01.jpg`,
         listPrice: 13500,
         salePrice: 12500,
-        shortDescription: "L(mm) 700 W(mm) 700 H(mm) 1200",
-        description: null,
+        measurements: "L(mm) 700 W(mm) 700 H(mm) 1200",
+        shortDescription: "A dramatic extra-tall planter with built-in handles for easier placement of large feature plants.",
+        longDescription: "The Nyanga With Handles planter offers impressive height and planting capacity with added convenience. Ideal for large decorative plants in commercial spaces, patios, and landscaped entrances.",
         images: [],
-        category: ''
+        category: 'flower-pots'
     },
     {
         id: '23',
@@ -279,10 +301,11 @@ export const products: Product[] = [
         mainImageUrl: `${COMPRESSOR_URL}/1m Table.jpg`,
         listPrice: 9999,
         salePrice: null,
-        shortDescription: "L(mm) 1000 W(mm) 1000 H(mm) 500",
-        description: null,
+        measurements: "L(mm) 1000 W(mm) 1000 H(mm) 500",
+        shortDescription: "A sturdy outdoor table that adds function and style to gardens, patios, and entertainment areas.",
+        longDescription: "The 1m Table is a practical and stylish addition to outdoor living spaces. Perfect for drinks, décor, and garden accessories, it fits beautifully into patios, seating areas, and commercial outdoor settings.",
         images: [],
-        category: ''
+        category: 'furniture'
     },
     {
         id: '24',
@@ -291,10 +314,11 @@ export const products: Product[] = [
         mainImageUrl: `${COMPRESSOR_URL}/Ridged Tuni mini - 01.jpg`,
         listPrice: 1300,
         salePrice: null,
-        shortDescription: "L(mm) 190 W(mm) 190 H(mm) 320",
-        description: null,
+        measurements: "L(mm) 190 W(mm) 190 H(mm) 320",
+        shortDescription: "A small textured planter ideal for succulents, herbs, and decorative plant accents.",
+        longDescription: "The Ridged Tuni Mini planter is a compact pot with stylish ridged detailing that adds texture to small plant displays. Ideal for balconies, window sills, and tabletop greenery.",
         images: [],
-        category: ''
+        category: 'flower-pots'
     },
     // {
     //     id: '25',
@@ -303,10 +327,11 @@ export const products: Product[] = [
     //     mainImageUrl: `${COMPRESSOR_URL}/Spheres - 01.jpg`,
     //     listPrice: 8800,
     //     salePrice: null,
-    //     shortDescription: "L(mm)  W(mm)  H(mm) ",
-    //     description: null,
+    //     measurements: "L(mm)  W(mm)  H(mm) ",
+    //     shortDescription: null,
+    //     longDescription: null,
     //     images: [`${COMPRESSOR_URL}/Spheres - 02.jpg`],
-    //     category: ''
+    //     category: 'flower-pots'
     // },
     // {
     //     id: '26',
@@ -315,10 +340,11 @@ export const products: Product[] = [
     //     mainImageUrl: `${COMPRESSOR_URL}/Warri Series - 01.jpg`,
     //     listPrice: 8800,
     //     salePrice: 8400,
-    //     shortDescription: "L(mm)  W(mm)  H(mm) ",
-    //     description: null,
+    //     measurements: "L(mm)  W(mm)  H(mm) ",
+    //     shortDescription: null,
+    //     longDescription: null,
     //     images: [],
-    //     category: ''
+    //     category: 'flower-pots'
     // },
     {
         id: '27',
@@ -327,10 +353,11 @@ export const products: Product[] = [
         mainImageUrl: `${COMPRESSOR_URL}/Dala 29 - 01.jpg`,
         listPrice: 7700,
         salePrice: null,
-        shortDescription: "L(mm) 550 W(mm) 550 H(mm) 700",
-        description: null,
+        measurements: "L(mm) 550 W(mm) 550 H(mm) 700",
+        shortDescription: "A tall, wide planter designed for bold greenery and structured garden styling.",
+        longDescription: "The Dala 29 flower pot offers generous width and height, making it ideal for lush plants and statement foliage. Perfect for patios, garden corners, entrances, and commercial landscapes.",
         images: [],
-        category: ''
+        category: 'flower-pots'
     },
     {
         id: '28',
@@ -339,10 +366,11 @@ export const products: Product[] = [
         mainImageUrl: `${COMPRESSOR_URL}/Tuni 37 - 01.jpg`,
         listPrice: 5000,
         salePrice: 4800,
-        shortDescription: "L(mm) 370 W(mm) 370 H(mm) 710",
-        description: null,
+        measurements: "L(mm) 370 W(mm) 370 H(mm) 710",
+        shortDescription: "A slim, tall planter ideal for vertical plant styling in compact indoor and outdoor spaces.",
+        longDescription: "The Tuni 37 flower pot is a tall, slender planter designed to maximize vertical greenery while using minimal floor space. Ideal for doorways, balconies, patios, and interior corners.",
         images: [],
-        category: ''
+        category: 'flower-pots'
     },
     {
         id: '29',
@@ -351,10 +379,11 @@ export const products: Product[] = [
         mainImageUrl: `${COMPRESSOR_URL}/Chilwa 68 - 01.jpg`,
         listPrice: 8800,
         salePrice: 8400,
-        shortDescription: "L(mm) 680 W(mm) 680 H(mm) 358",
-        description: null,
+        measurements: "L(mm) 680 W(mm) 680 H(mm) 358",
+        shortDescription: "A wide, low-profile water feature that brings a calm, modern focal point to gardens and outdoor living spaces.",
+        longDescription: "The Chilwa 68 water feature introduces the soothing presence of water into your landscape with a clean, contemporary look. Perfect for courtyards, patios, and garden corners.",
         images: [`${COMPRESSOR_URL}/Chilwa 68 - 02.jpg`],
-        category: ''
+        category: 'water-features'
     },
     {
         id: '30',
@@ -363,9 +392,10 @@ export const products: Product[] = [
         mainImageUrl: `${COMPRESSOR_URL}/Kananga S - 01.jpg`,
         listPrice: 3900,
         salePrice: null,
-        shortDescription: "L(mm) 350 W(mm) 350 H(mm) 400",
-        description: null,
+        measurements: "L(mm) 350 W(mm) 350 H(mm) 400",
+        shortDescription: "A compact decorative planter that adds artistic character and greenery to smaller spaces.",
+        longDescription: "The Kananga S planter offers decorative appeal in a compact size. Ideal for small plants, succulents, and decorative greenery in balconies, patios, and indoor spaces.",
         images: [],
-        category: ''
+        category: 'flower-pots'
     },
 ]
