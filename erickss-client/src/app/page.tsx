@@ -26,7 +26,7 @@ export default function Home() {
 						</div>
 					</div>
 					<div id={styles['hero-main-categories']}>
-						<Link href='/products?filterBy=water-features' className={styles['hero-main-category']} style={{ backgroundImage: 'url(/images/water-features.jpg)' }}>
+						<Link href='/products?filterBy=water-features' className={styles['hero-main-category']} style={{ backgroundImage: 'url(/images/4-tier-fountain-1.jpg)' }}>
 							<div className={`${styles['hero-main-category-label']} glass`}>Water Features</div>
 						</Link>
 						<Link href='/products?filterBy=flower-pots' className={styles['hero-main-category']} style={{ backgroundImage: 'url(/images/charm42.jpg)' }}>
