@@ -22,6 +22,46 @@ export const products: Product[] = [
         category: 'flower-pots'
     },
     {
+        id: '95',
+        slug: '4-tier-fountain-1',
+        name: '4 tier Fountain 1',
+        mainImageUrl: `${COMPRESSOR_URL}/4-tier-fountain-1.jpg`,
+        listPrice: 670000,
+        salePrice: null,
+        measurements: "L(mm) 3500 W(mm) 3500 H(mm) 2000",
+        shortDescription: "A grand four-tier fountain that creates a dramatic water feature for large gardens, estates, and public spaces.",
+        longDescription: "The 4 tier Fountain 1 is an impressive centrepiece designed for expansive outdoor settings, combining multiple cascading tiers with classic styling. Ideal for estates, hotels, plazas, and formal gardens, it delivers continuous movement, soothing sound, and unforgettable visual impact.",
+        images: [],
+        category: 'water-features'
+    },
+    {
+        id: '58',
+        slug: 'curved-pyramid',
+        name: 'Curved Pyramid',
+        mainImageUrl: `${COMPRESSOR_URL}/curved-pyramid.jpg`,
+        listPrice: 9200,
+        salePrice: null,
+        measurements: "L(mm) 650 W(mm) 650 H(mm) 650",
+        shortDescription: "A sculptural pyramid-shaped planter that adds architectural interest and bold lines to modern gardens.",
+        longDescription: "The Curved Pyramid planter combines strong geometric form with softened edges, creating a striking focal point for contemporary landscapes. Ideal for structural planting, feature grasses, or sculptural shrubs, it works beautifully at entrances, along pathways, or as a standalone garden statement.",
+        images: [],
+        category: 'flower-pots'
+    },
+
+    {
+        id: '73',
+        slug: 'large-chateau',
+        name: 'Large Chateau',
+        mainImageUrl: `${COMPRESSOR_URL}/large-chateau.jpg`,
+        listPrice: 7500,
+        salePrice: null,
+        measurements: "L(mm) 600 W(mm) 600 H(mm) 600",
+        shortDescription: "A generous Chateau planter designed for larger plants and bold, traditional garden statements.",
+        longDescription: "The Large Chateau planter offers ample room for substantial shrubs, small trees, and layered planting schemes. Its classic styling makes it ideal for formal gardens, grand entrances, courtyards, and terraces seeking a timeless, elegant look.",
+        images: [],
+        category: 'flower-pots'
+    },
+    {
         id: '2',
         slug: 'kivu-70',
         name: 'Kivu 70',
@@ -555,19 +595,6 @@ export const products: Product[] = [
         category: 'flower-pots'
     },
     {
-        id: '58',
-        slug: 'curved-pyramid',
-        name: 'Curved Pyramid',
-        mainImageUrl: `${COMPRESSOR_URL}/curved-pyramid.jpg`,
-        listPrice: 9200,
-        salePrice: null,
-        measurements: "L(mm) 650 W(mm) 650 H(mm) 650",
-        shortDescription: "A sculptural pyramid-shaped planter that adds architectural interest and bold lines to modern gardens.",
-        longDescription: "The Curved Pyramid planter combines strong geometric form with softened edges, creating a striking focal point for contemporary landscapes. Ideal for structural planting, feature grasses, or sculptural shrubs, it works beautifully at entrances, along pathways, or as a standalone garden statement.",
-        images: [],
-        category: 'flower-pots'
-    },
-    {
         id: '59',
         slug: 'karn-a-1m',
         name: 'Karn A 1m',
@@ -746,19 +773,6 @@ export const products: Product[] = [
         measurements: "L(mm) 500 W(mm) 500 H(mm) 430",
         shortDescription: "A decorative planter with classic Chateau styling, ideal for traditional gardens and elegant entrances.",
         longDescription: "The Medium Chateau planter combines refined detailing with a practical planting area, making it perfect for shrubs, flowers, and decorative greenery. Use it to frame doorways, line pathways, or accent patios where a touch of classical charm is desired.",
-        images: [],
-        category: 'flower-pots'
-    },
-    {
-        id: '73',
-        slug: 'large-chateau',
-        name: 'Large Chateau',
-        mainImageUrl: `${COMPRESSOR_URL}/large-chateau.jpg`,
-        listPrice: 7500,
-        salePrice: null,
-        measurements: "L(mm) 600 W(mm) 600 H(mm) 600",
-        shortDescription: "A generous Chateau planter designed for larger plants and bold, traditional garden statements.",
-        longDescription: "The Large Chateau planter offers ample room for substantial shrubs, small trees, and layered planting schemes. Its classic styling makes it ideal for formal gardens, grand entrances, courtyards, and terraces seeking a timeless, elegant look.",
         images: [],
         category: 'flower-pots'
     },
@@ -1034,19 +1048,6 @@ export const products: Product[] = [
         longDescription: "The Chateau M with Pedestal combines a decorative planter with an integrated base to raise plants for extra impact. Ideal for framing entrances, lining pathways, and highlighting focal points, it suits formal gardens, verandas, and elegant outdoor entertaining areas.",
         images: [],
         category: 'flower-pots'
-    },
-    {
-        id: '95',
-        slug: '4-tier-fountain-1',
-        name: '4 tier Fountain 1',
-        mainImageUrl: `${COMPRESSOR_URL}/4-tier-fountain-1.jpg`,
-        listPrice: 670000,
-        salePrice: null,
-        measurements: "L(mm) 3500 W(mm) 3500 H(mm) 2000",
-        shortDescription: "A grand four-tier fountain that creates a dramatic water feature for large gardens, estates, and public spaces.",
-        longDescription: "The 4 tier Fountain 1 is an impressive centrepiece designed for expansive outdoor settings, combining multiple cascading tiers with classic styling. Ideal for estates, hotels, plazas, and formal gardens, it delivers continuous movement, soothing sound, and unforgettable visual impact.",
-        images: [],
-        category: 'water-features'
     },
     {
         id: '96',

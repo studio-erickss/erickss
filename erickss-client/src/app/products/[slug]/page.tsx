@@ -122,6 +122,9 @@ export default function Product({ params }: any) {
                                 <hr className="my-2 md:my-3 border-gray-200 dark:border-gray-800" />
 
                                 <p className="text-gray-500 dark:text-gray-400 mb-2 w-96">
+                                    {product.measurements}
+                                </p>
+                                <p className="text-gray-500 dark:text-gray-400 mb-2 w-96">
                                     {product.shortDescription}
                                 </p>
 
