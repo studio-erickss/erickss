@@ -422,7 +422,7 @@ export const products: Product[] = [
         shortDescription: "A small decorative concrete sphere ideal for adding sculptural interest to garden beds and walkways.",
         longDescription: "The 9in Sphere is a compact decorative feature designed to bring soft, sculptural shapes into your landscape. Use it alone as an accent, grouped with other spheres, or combined with planters to add texture and visual interest to patios, pathways, and garden beds.",
         images: [],
-        category: 'decor'
+        category: 'sculptures'
     },
     {
         id: '48',
@@ -435,7 +435,7 @@ export const products: Product[] = [
         shortDescription: "A medium decorative sphere that adds modern, sculptural charm to outdoor and indoor spaces.",
         longDescription: "The 14in Sphere is a versatile decorative element that enhances gardens, courtyards, and entrances with a clean, rounded form. Perfect as a standalone statement, in clusters of different sizes, or paired with water features and planters for a cohesive, contemporary look.",
         images: [],
-        category: 'decor'
+        category: 'sculptures'
     },
     {
         id: '49',
@@ -448,7 +448,7 @@ export const products: Product[] = [
         shortDescription: "A generously sized decorative sphere that creates a bold focal point in gardens and outdoor settings.",
         longDescription: "The 16in Sphere offers a striking sculptural presence, ideal for anchoring corners, pathways, and landscaped beds. Use it as a single feature or combine with other sphere sizes to create layered, contemporary garden design with subtle sophistication.",
         images: [],
-        category: 'decor'
+        category: 'sculptures'
     },
     {
         id: '50',
@@ -461,7 +461,7 @@ export const products: Product[] = [
         shortDescription: "A large decorative sphere that adds sculptural drama and structure to outdoor landscapes.",
         longDescription: "The 19.5in Sphere is a bold design feature perfect for creating visual impact in gardens, courtyards, and driveways. Its generous size and simple form complement both modern and classic landscapes, whether used alone, in pairs, or as part of a grouped display.",
         images: [],
-        category: 'decor'
+        category: 'sculptures'
     },
     {
         id: '51',
@@ -474,7 +474,7 @@ export const products: Product[] = [
         shortDescription: "An extra-large decorative sphere that serves as a sculptural centrepiece in spacious gardens and courtyards.",
         longDescription: "The 24in Sphere is designed for maximum visual impact, offering a strong, rounded form that anchors large outdoor spaces. Ideal for feature lawns, entranceways, and landscaped terraces, it pairs beautifully with architectural planting and modern hardscaping.",
         images: [],
-        category: 'decor'
+        category: 'sculptures'
     },
     {
         id: '52',
@@ -487,7 +487,7 @@ export const products: Product[] = [
         shortDescription: "A substantial decorative sphere that adds sculptural scale and presence to large outdoor areas.",
         longDescription: "The 36in Sphere is a commanding design element suited to expansive gardens, estates, and commercial landscapes. Its impressive size and clean shape make it ideal as a standalone focal point or as part of a dramatic sculptural grouping that complements contemporary architecture.",
         images: [],
-        category: 'decor'
+        category: 'sculptures'
     },
     {
         id: '53',
@@ -500,7 +500,7 @@ export const products: Product[] = [
         shortDescription: "A dramatic 1m decorative sphere that creates an eye-catching statement in any landscape.",
         longDescription: "The 1m Sphere is a show-stopping garden feature designed to transform large outdoor spaces with bold, sculptural form. Perfect for driveways, formal lawns, commercial entrances, and contemporary gardens, it delivers strong visual impact while complementing modern planting schemes and hardscape designs.",
         images: [],
-        category: 'decor'
+        category: 'sculptures'
     },
     {
         id: '54',
@@ -513,7 +513,7 @@ export const products: Product[] = [
         shortDescription: "An oversized decorative sphere designed for dramatic, architectural landscape statements.",
         longDescription: "The 46in Sphere is a monumental outdoor feature that brings powerful sculptural presence to large gardens, estates, and public or commercial spaces. Its impressive scale and simple geometry make it ideal for anchoring vistas, highlighting entrances, or punctuating expansive lawns and courtyards.",
         images: [],
-        category: 'decor'
+        category: 'sculptures'
     },
     {
         id: '55',
@@ -825,7 +825,7 @@ export const products: Product[] = [
         shortDescription: "A decorative lantern-style feature that adds ambience and sculptural interest to patios and garden spaces.",
         longDescription: "The Meeta Lantern is a versatile décor piece designed to complement outdoor seating areas, pathways, and landscaped corners. Use it as a sculptural accent by day and pair it with lighting for warm, atmospheric evenings in your garden or entertainment area.",
         images: [],
-        category: 'decor'
+        category: 'sculptures'
     },
     {
         id: '79',
@@ -981,7 +981,7 @@ export const products: Product[] = [
         shortDescription: "A 1m decorative table with sculptural sphere legs that adds character to patios and entertainment areas.",
         longDescription: "The 1m table with sphere legs is a functional décor piece that doubles as a sculptural feature in outdoor living spaces. Ideal for drinks, décor, and gatherings on patios, pool decks, and terraces, it pairs beautifully with modern garden furniture and contemporary landscaping.",
         images: [],
-        category: 'decor'
+        category: 'sculptures'
     },
     {
         id: '91',
