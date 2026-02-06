@@ -7,6 +7,7 @@ import CustomProductCard from '@/components/custom-product-card';
 import ProductsFilters from '@/components/products-filters';
 import { products } from '@/testdata';
 import { Metadata } from 'next';
+import Link from 'next/link';
 
 export const metadata: Metadata = {
     title: "Products",
@@ -14,6 +15,29 @@ export const metadata: Metadata = {
 
 export default async function Products({ searchParams }: any) {
     const productsData = await getServerSideProps(searchParams);
+    const pageSize = 24;
+    const totalPages = Math.max(1, Math.ceil((productsData?.totalCount ?? 0) / pageSize));
+    const currentPage = Math.min(Math.max(1, productsData?.page ?? 1), totalPages);
+
+    const makeHref = (page: number) => {
+        const params = new URLSearchParams();
+        if (searchParams?.filterBy) params.set('filterBy', String(searchParams.filterBy));
+        if (searchParams?.sortBy) params.set('sortBy', String(searchParams.sortBy));
+        if (searchParams?.query) params.set('query', String(searchParams.query));
+        params.set('page', String(page));
+        return `/products?${params.toString()}`;
+    };
+
+    const pageNumbers = (() => {
+        const windowSize = 5;
+        const half = Math.floor(windowSize / 2);
+        let start = Math.max(1, currentPage - half);
+        let end = Math.min(totalPages, start + windowSize - 1);
+        start = Math.max(1, end - windowSize + 1);
+        const pages: number[] = [];
+        for (let p = start; p <= end; p += 1) pages.push(p);
+        return pages;
+    })();
 
     return (
         <div id={styles['products-container']}>
@@ -41,13 +65,61 @@ export default async function Products({ searchParams }: any) {
             </div>
 
             <div id={styles['products-pagination']}>
-                {/* <div className={`dull-text text-sm underline-offset-2 underline`}>97 | Total products</div> */}
+                <div className={`dull-text text-sm flex items-center`}>
+                    {productsData?.totalCount ?? 0} | Total products
+                </div>
                 <div className="join">
-                    <button className="join-item btn btn-disabled"><IconChevronsLeft /></button>
-                    <button className="join-item btn btn-disabled"><IconChevronLeft /> Previous</button>
-                    <button className="join-item btn btn-disabled">1</button>
-                    <button className="join-item btn btn-disabled">Next <IconChevronRight /></button>
-                    <button className="join-item btn btn-disabled"><IconChevronsRight /></button>
+                    {currentPage > 1 ? (
+                        <Link className="join-item btn" href={makeHref(1)} aria-label="First page">
+                            <IconChevronsLeft />
+                        </Link>
+                    ) : (
+                        <button className="join-item btn btn-disabled" aria-disabled="true">
+                            <IconChevronsLeft />
+                        </button>
+                    )}
+
+                    {currentPage > 1 ? (
+                        <Link className="join-item btn" href={makeHref(currentPage - 1)} aria-label="Previous page">
+                            <IconChevronLeft /> Previous
+                        </Link>
+                    ) : (
+                        <button className="join-item btn btn-disabled" aria-disabled="true">
+                            <IconChevronLeft /> Previous
+                        </button>
+                    )}
+
+                    {pageNumbers.map((p) =>
+                        p === currentPage ? (
+                            <span key={p} className="join-item btn btn-active" aria-current="page">
+                                {p}
+                            </span>
+                        ) : (
+                            <Link key={p} className="join-item btn" href={makeHref(p)} aria-label={`Page ${p}`}>
+                                {p}
+                            </Link>
+                        )
+                    )}
+
+                    {currentPage < totalPages ? (
+                        <Link className="join-item btn" href={makeHref(currentPage + 1)} aria-label="Next page">
+                            Next <IconChevronRight />
+                        </Link>
+                    ) : (
+                        <button className="join-item btn btn-disabled" aria-disabled="true">
+                            Next <IconChevronRight />
+                        </button>
+                    )}
+
+                    {currentPage < totalPages ? (
+                        <Link className="join-item btn" href={makeHref(totalPages)} aria-label="Last page">
+                            <IconChevronsRight />
+                        </Link>
+                    ) : (
+                        <button className="join-item btn btn-disabled" aria-disabled="true">
+                            <IconChevronsRight />
+                        </button>
+                    )}
                 </div>
             </div>
         </div>

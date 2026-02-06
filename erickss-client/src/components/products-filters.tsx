@@ -28,7 +28,11 @@ export default function ProductsFilters() {
         // Reset to page 1 when filters change
         params.set('page', '1');
         
-        router.push(`/products?${params.toString()}`);
+        const nextUrl = `/products?${params.toString()}`;
+        const currentUrl = `/products?${searchParams.toString()}`;
+        if (nextUrl !== currentUrl) {
+            router.push(nextUrl);
+        }
     }, [router, searchParams]);
 
     // Handle filter change
@@ -43,12 +47,16 @@ export default function ProductsFilters() {
 
     // Debounced search
     useEffect(() => {
+        const urlQuery = searchParams.get('query') || '';
+        // Prevent pushing a URL on mount / page-change when query didn't change.
+        if (searchQuery === urlQuery) return;
+
         const timer = setTimeout(() => {
             updateParams({ query: searchQuery });
         }, 300); // 300ms debounce
 
         return () => clearTimeout(timer);
-    }, [searchQuery, updateParams]);
+    }, [searchQuery, updateParams, searchParams]);
 
     // Sync search input with URL when URL changes externally
     useEffect(() => {
@@ -98,7 +106,6 @@ export default function ProductsFilters() {
                         <option value='birdbaths-and-feeders'>Birdbaths &amp; Feeders</option>
                         <option value='furniture'>Furniture</option>
                         <option value='sculptures'>Sculptures</option>
-                        <option value='decor'>Decor</option>
                         <option value='furniture-and-sculptures'>Furniture &amp; Sculptures</option>
                     </select>
                 </div>

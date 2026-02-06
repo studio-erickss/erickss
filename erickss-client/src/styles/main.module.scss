@@ -265,11 +265,12 @@ $header-height: min(10svh, 100px);
     gap: 1rem;
     align-items: stretch;
     
-    button {
+    button, a, span {
         padding: 0.5rem;
         height: max-content;
         min-height: max-content;
         min-width: 2rem;
+        text-decoration: none;
         
         svg {
             width: 14px;
