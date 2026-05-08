@@ -2,6 +2,7 @@ import Image from "next/image";
 import styles from '@/styles/main.module.scss'
 import Link from "next/link";
 import { Menu, ShoppingCart } from '@carbon/icons-react'
+import ObfuscatedEmailLink from '@/components/obfuscated-email-link';
 
 
 export default function Header() {
@@ -9,7 +10,7 @@ export default function Header() {
         <>
             <div id={styles['utility-bar']}>
                 Call <a href="tel:+254717543033" target="_blank" style={{ fontWeight: 'bold' }}>+254 717 543 033</a> or
-                Email <a href="mailto:info@erickss.com" style={{ fontWeight: 'bold' }} target="_blank">info@erickss.com</a>
+                Email <ObfuscatedEmailLink style={{ fontWeight: 'bold' }} />
             </div>
             <header className="navbar bg-base-100">
                 <div className="navbar-start">

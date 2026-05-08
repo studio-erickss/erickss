@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import React from 'react';
+import ObfuscatedEmailLink from '@/components/obfuscated-email-link';
 
 export default async function ContactForm() {
     return (
@@ -48,7 +49,7 @@ export default async function ContactForm() {
                         <p className="text-base-content/80 mb-10 text-lg font-medium">
                             For custom design requests, updates on your purchases, or inquiry, please leave us a message via our communication channels and we will get back to you right away.
                             Call <a href="tel:+254717543033" target="_blank" style={{ fontWeight: 'bold' }}>+254 717 543 033</a> or
-                            Email <a href="mailto:info@erickss.com" style={{ fontWeight: 'bold' }} target="_blank">info@erickss.com</a> or
+                            Email <ObfuscatedEmailLink style={{ fontWeight: 'bold' }} /> or
                             <Link aria-label="Chat on WhatsApp" href="https://wa.me/254746767352" target="_blank" className='underline'> WhatsApp us.</Link>
                         </p>
                     </div>
