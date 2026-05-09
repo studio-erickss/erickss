@@ -1,9 +1,6 @@
 import type { Config } from "tailwindcss";
-
-
-const {
-  default: flattenColorPalette,
-} = require("tailwindcss/lib/util/flattenColorPalette");
+import daisyui from "daisyui";
+import daisyuiThemes from "daisyui/src/theming/themes";
 
 const config: Config = {
   content: [
@@ -20,12 +17,12 @@ const config: Config = {
       },
     },
   },
-  plugins: [require("daisyui")],
+  plugins: [daisyui],
   daisyui: {
     themes: [
       {
         light: {
-          ...require("daisyui/src/theming/themes")["light"],
+          ...daisyuiThemes["light"],
           primary: "#EF820D",
           'primary-content': 'white',
           secondary: '#65BC7B',
@@ -34,7 +31,7 @@ const config: Config = {
           // 'base-100': '#e6e6e6', // affects some components. e.g. skeletons are not visible in light mode.
         },
         dark: {
-          ...require("daisyui/src/theming/themes")["dark"],
+          ...daisyuiThemes["dark"],
           primary: "#EF820D",
           'primary-content': 'white',
           secondary: '#65BC7B',

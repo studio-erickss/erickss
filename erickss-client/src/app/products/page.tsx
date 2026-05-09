@@ -1,4 +1,4 @@
-import React from 'react';
+import { Suspense } from 'react';
 import styles from '@/styles/main.module.scss';
 import { IconChevronLeft, IconChevronsLeft, IconChevronsRight, IconChevronRight } from '@tabler/icons-react';
 import ProductCard from '@/components/product-card';
@@ -8,22 +8,34 @@ import ProductsFilters from '@/components/products-filters';
 import { products } from '@/testdata';
 import { Metadata } from 'next';
 import Link from 'next/link';
+import {Product} from "@/types";
 
 export const metadata: Metadata = {
     title: "Products",
 };
 
-export default async function Products({ searchParams }: any) {
-    const productsData = await getServerSideProps(searchParams);
+type SearchParams = Record<string, string | string[] | undefined>;
+
+const getSearchParamValue = (value: string | string[] | undefined): string => {
+    if (Array.isArray(value)) return value[0] ?? '';
+    return value ?? '';
+};
+
+export default async function Products({ searchParams }: { searchParams: Promise<SearchParams> }) {
+    const resolvedSearchParams = await searchParams;
+    const productsData = getServerSideProps(resolvedSearchParams);
     const pageSize = 24;
     const totalPages = Math.max(1, Math.ceil((productsData?.totalCount ?? 0) / pageSize));
     const currentPage = Math.min(Math.max(1, productsData?.page ?? 1), totalPages);
 
     const makeHref = (page: number) => {
         const params = new URLSearchParams();
-        if (searchParams?.filterBy) params.set('filterBy', String(searchParams.filterBy));
-        if (searchParams?.sortBy) params.set('sortBy', String(searchParams.sortBy));
-        if (searchParams?.query) params.set('query', String(searchParams.query));
+        const filterBy = getSearchParamValue(resolvedSearchParams?.filterBy);
+        const sortBy = getSearchParamValue(resolvedSearchParams?.sortBy);
+        const query = getSearchParamValue(resolvedSearchParams?.query);
+        if (filterBy) params.set('filterBy', filterBy);
+        if (sortBy) params.set('sortBy', sortBy);
+        if (query) params.set('query', query);
         params.set('page', String(page));
         return `/products?${params.toString()}`;
     };
@@ -32,7 +44,7 @@ export default async function Products({ searchParams }: any) {
         const windowSize = 5;
         const half = Math.floor(windowSize / 2);
         let start = Math.max(1, currentPage - half);
-        let end = Math.min(totalPages, start + windowSize - 1);
+        const end = Math.min(totalPages, start + windowSize - 1);
         start = Math.max(1, end - windowSize + 1);
         const pages: number[] = [];
         for (let p = start; p <= end; p += 1) pages.push(p);
@@ -41,11 +53,13 @@ export default async function Products({ searchParams }: any) {
 
     return (
         <div id={styles['products-container']}>
-            <ProductsFilters />
+            <Suspense fallback={null}>
+                <ProductsFilters />
+            </Suspense>
 
             <div id={styles.products}>
                 {productsData
-                    ? productsData.results.map((product: any) => (
+                    ? productsData.results.map((product: Product) => (
                         <ProductCard
                             key={product.id}
                             product={{
@@ -126,14 +140,19 @@ export default async function Products({ searchParams }: any) {
     );
 }
 
-const getServerSideProps = async (searchParams: any) => {
+const getServerSideProps = (searchParams: SearchParams) => {
     const pageSize = 24;
     const {
-        page = '1',
-        filterBy = '',
-        sortBy = '',
-        query = '',
+        page: rawPage,
+        filterBy: rawFilterBy,
+        sortBy: rawSortBy,
+        query: rawQuery,
     } = searchParams || {};
+
+    const page = getSearchParamValue(rawPage) || '1';
+    const filterBy = getSearchParamValue(rawFilterBy);
+    const sortBy = getSearchParamValue(rawSortBy);
+    const query = getSearchParamValue(rawQuery);
 
     let results = [...products];
 
