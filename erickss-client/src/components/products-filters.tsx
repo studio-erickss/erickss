@@ -1,13 +1,17 @@
 'use client';
 
-import { useEffect, useState, useCallback } from 'react';
+import { useCallback, useEffect, useRef } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import styles from '@/styles/main.module.scss';
 
 export default function ProductsFilters() {
     const router = useRouter();
     const searchParams = useSearchParams();
-    const [searchQuery, setSearchQuery] = useState(searchParams.get('query') || '');
+    const searchDebounceRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+    const searchInputRef = useRef<HTMLInputElement | null>(null);
+    const shouldRestoreSearchFocusRef = useRef(false);
+
+    const urlQuery = searchParams.get('query') || '';
 
     // Get current values from URL
     const currentFilterBy = searchParams.get('filterBy') || '';
@@ -45,37 +49,43 @@ export default function ProductsFilters() {
         updateParams({ sortBy: e.target.value });
     };
 
-    // Debounced search
-    useEffect(() => {
-        const urlQuery = searchParams.get('query') || '';
-        // Prevent pushing a URL on mount / page-change when query didn't change.
-        if (searchQuery === urlQuery) return;
+    const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        const nextQuery = e.target.value;
+        shouldRestoreSearchFocusRef.current = document.activeElement === e.target;
 
-        const timer = setTimeout(() => {
-            updateParams({ query: searchQuery });
-        }, 300); // 300ms debounce
-
-        return () => clearTimeout(timer);
-    }, [searchQuery, updateParams, searchParams]);
-
-    // Sync search input with URL when URL changes externally
-    useEffect(() => {
-        const urlQuery = searchParams.get('query') || '';
-        if (urlQuery !== searchQuery) {
-            setSearchQuery(urlQuery);
+        if (searchDebounceRef.current) {
+            clearTimeout(searchDebounceRef.current);
         }
-    }, [searchParams]);
+
+        searchDebounceRef.current = setTimeout(() => {
+            updateParams({ query: nextQuery });
+        }, 300);
+    };
+
+    useEffect(() => {
+        if (!shouldRestoreSearchFocusRef.current) return;
+
+        const input = searchInputRef.current;
+        if (!input) return;
+
+        input.focus();
+        const end = input.value.length;
+        input.setSelectionRange(end, end);
+        shouldRestoreSearchFocusRef.current = false;
+    }, [urlQuery]);
 
     return (
         <div id={styles['search-and-filters']} className="flex flex-col gap-4">
             <div id={styles.search}>
                 <label className="input border-b-2 border-b-base-300 flex items-center gap-2 focus-within:outline-none">
                     <input
+                        ref={searchInputRef}
+                        key={urlQuery}
                         type="text"
                         className="grow focus:outline-none focus:ring-0"
                         placeholder="Search"
-                        value={searchQuery}
-                        onChange={(e) => setSearchQuery(e.target.value)}
+                        defaultValue={urlQuery}
+                        onChange={handleSearchChange}
                     />
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
