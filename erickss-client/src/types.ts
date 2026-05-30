@@ -9,7 +9,14 @@ export interface Product {
     longDescription: string | null
     images: string[]
     category: string
-    measurements: string
+    measurements: Measurement
+}
+
+export interface Measurement {
+    length: number
+    width: number
+    height: number
+    unit: 'mm'
 }
 
 export interface Response {
