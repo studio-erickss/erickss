@@ -120,10 +120,34 @@ export default async function Product({ params }: { params: Promise<{ slug: stri
                                 </div>
 
                                 <hr className="my-2 md:my-3 border-gray-200 dark:border-gray-800" />
-
-                                <p className="text-gray-500 dark:text-gray-400 mb-2 w-96">
-                                    {product.measurements}
+                                <div className="p-4 rounded-lg border border-green-200 bg-green-50 dark:bg-gray-800 dark:border-gray-700 max-w-sm text-gray-800 dark:text-gray-200">
+                                <div className="flex items-center gap-2 mb-3">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-ruler-icon lucide-ruler">
+                                        <path d="M21.3 15.3a2.4 2.4 0 0 1 0 3.4l-2.6 2.6a2.4 2.4 0 0 1-3.4 0L2.7 8.7a2.41 2.41 0 0 1 0-3.4l2.6-2.6a2.41 2.41 0 0 1 3.4 0Z"/>
+                                        <path d="m14.5 12.5 2-2"/>
+                                        <path d="m11.5 9.5 2-2"/>
+                                        <path d="m8.5 6.5 2-2"/>
+                                        <path d="m17.5 15.5 2-2"/>
+                                    </svg>
+                                    <span className="text-sm font-semibold tracking-wide">DIMENSIONS</span>
+                                </div>
+                                <p className="text-sm font-medium text-gray-700 dark:text-gray-400 space-x-2">
+                                    <span className="font-bold text-gray-800 dark:text-gray-300">   
+                                        {product.measurements.length} {product.measurements.unit}
+                                    </span>
+                                    <span>x</span>
+                                    <span className="font-bold text-gray-800 dark:text-gray-300">   
+                                        {product.measurements.width} {product.measurements.unit}
+                                    </span>
+                                    <span>x</span>
+                                    <span className="font-bold text-gray-800 dark:text-gray-300">   
+                                        {product.measurements.height} {product.measurements.unit}
+                                    </span>
+                                    <span className="text-xs text-gray-500 dark:text-gray-400">
+                                        (L × W × H)
+                                    </span>
                                 </p>
+                                </div>
                                 <p className="text-gray-500 dark:text-gray-400 mb-2 w-96">
                                     {product.shortDescription}
                                 </p>
